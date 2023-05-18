@@ -30,14 +30,16 @@ Experiment with these commands to create, copy, move, and delete files.
 
 Bash is not just a command interpreter; it is also a scripting language. You can create shell scripts to automate tasks and perform more complex operations. Follow these steps to create a simple shell script:
 
-1. Open a text editor and create a new file with a `.sh` extension (e.g., `myscript.sh`).
-2. Add the following lines to the file:
+Open a text editor and create a new file with a `.sh` extension (e.g., `myscript.sh`).
+
+Add the following lines to the file:
 [source,bash]
 ----
 #!/bin/bash
 echo "Hello, world!"
 ----
-3. Save the file and exit the text editor.
+
+Save the file and exit the text editor.
 
 To run the shell script, navigate to the directory where the script is located and execute the following command:
 [source,bash]
