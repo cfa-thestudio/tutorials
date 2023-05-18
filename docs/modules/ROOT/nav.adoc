@@ -1,4 +1,11 @@
 // the studio
-* xref:ROOT:index.adoc[github]
-** xref:ROOT:ssh_github.adoc[github ssh]
+* xref:github:github.adoc[github]
+** xref:github:github_quick_start.adoc[quick start]
+** xref:github:github_ssh.adoc[ssh connection]
+
+* xref:bash:bash.adoc[bash]
+** xref:bash:bash_quickstart.adoc[quick start]
+** xref:bash:bash_cheat.adoc[cheat sheet]
+** xref:bash:bash_keyboard_commands.adoc[keyboard]
+
 

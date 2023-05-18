@@ -1,0 +1,86 @@
+= GitHub Quick Start Guide
+
+== the video
+
+video::0hQfAju50A8[youtube,width=600,height=360,align=left]
+
+
+== the steps
+
+
+=== Step 1: Create a GitHub Account
+
+Go to the GitHub website (github.com) and sign up for a new account by providing the required information.
+Choose a unique username and a strong password.
+
+=== Step 2: Set Up Git
+
+Install Git on your computer if you haven't already. You can download it from the official Git website (git-scm.com) and follow the installation instructions for your operating system.
+Open a terminal or command prompt and configure your Git identity by setting your username and email using the following commands:
+
+[,bash]
+-----
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+-----
+
+=== Step 3: Create a New Repository
+
+Once you're logged in to GitHub, click on the "+" sign in the top right corner and select "New repository".
+Give your repository a name, choose whether it should be public or private, and add an optional description.
+Click "Create repository" to create your new repository on GitHub.
+
+=== Step 4: Clone the Repository
+
+On the repository page, click on the green "Code" button and copy the URL of your repository.
+Open a terminal or command prompt and navigate to the directory where you want to clone the repository.
+Run the following command, replacing `<repository-url>` with the URL you copied:
+[,bash]
+-----
+git clone <repository-url>
+-----
+
+=== Step 5: Make Changes and Commit
+
+Open the cloned repository in your preferred code editor.
+Make any necessary changes to the files in your repository.
+Once you're ready to save your changes, open a terminal or command prompt in the repository directory.
+Use the following commands to stage your changes and commit them with a descriptive message:
+
+[,bash]
+-----
+git add .
+git commit -m "Your commit message"
+-----
+
+=== Step 6: Push Changes to GitHub
+
+After committing your changes locally, you can push them to your GitHub repository.
+Run the following command to push your changes:
+[,bash]
+-----
+git push origin main
+-----
+
+=== Step 7: Branching and Pull Requests (Optional)
+
+If you're working on a collaborative project or want to experiment with new features without affecting the main codebase, consider branching.
+To create a new branch, use the following command:
+
+[,bash]
+-----
+git checkout -b branch-name
+-----
+
+Make changes, commit them, and push the branch to GitHub:
+
+[,bash]
+-----
+git push origin branch-name
+-----
+
+If you want to merge your changes into the main branch, create a pull request on the GitHub website.
+
+That's it! You've completed the basic steps to start using GitHub. Remember to explore additional features and workflows offered by GitHub, such as issues, project boards, and collaborating with others. The GitHub documentation (https://docs.github.com) is a great resource for further learning and mastering the platform.
+
+== the links

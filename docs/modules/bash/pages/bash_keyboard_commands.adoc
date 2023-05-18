@@ -1,0 +1,60 @@
+= Bash Keyboard Commands 
+
+== Linux
+
+=== Navigation:
+  - `Ctrl + A`: Move the cursor to the beginning of the line.
+  - `Ctrl + E`: Move the cursor to the end of the line.
+  - `Ctrl + B` or `Left Arrow`: Move the cursor back one character.
+  - `Ctrl + F` or `Right Arrow`: Move the cursor forward one character.
+  - `Alt + B`: Move the cursor back one word.
+  - `Alt + F`: Move the cursor forward one word.
+
+=== Editing:
+  - `Ctrl + U`: Delete from the cursor position to the beginning of the line.
+  - `Ctrl + K`: Delete from the cursor position to the end of the line.
+  - `Ctrl + W`: Delete the word before the cursor.
+  - `Ctrl + Y`: Paste the last deleted text.
+  - `Ctrl + L`: Clear the screen (similar to the `clear` command).
+  - `Ctrl + D`: Exit the shell (if the input line is empty).
+  - `Ctrl + C`: Cancel the current command or process.
+
+=== History:
+  - `Ctrl + P` or `Up Arrow`: Previous command in history.
+  - `Ctrl + N` or `Down Arrow`: Next command in history.
+  - `Ctrl + R`: Search command history (start typing to search, press `Ctrl + R` again to cycle through matches).
+  - `Ctrl + G`: Escape from history search mode.
+  - `Ctrl + S`: Freeze terminal output (press `Ctrl + Q` to resume).
+
+=== Completion:
+  - `Tab`: Auto-complete a command or filename (press twice for a list of options).
+  - `Alt + /`: Auto-complete a filename or path (cyclically fills in the rest).
+  - `Ctrl + _`: Undo the auto-completion.
+
+These keyboard commands can help you navigate, edit, and streamline your command-line experience in the Bash shell on Linux. Note that some shortcuts may vary depending on the terminal emulator or shell configuration you are using.
+
+
+== macOS
+
+=== Navigation:
+  - `Ctrl + A`: Move the cursor to the beginning of the line.
+  - `Ctrl + E`: Move the cursor to the end of the line.
+  - `Ctrl + B` or `Left Arrow`: Move the cursor back one character.
+  - `Ctrl + F` or `Right Arrow`: Move the cursor forward one character.
+  - `Option + B`: Move the cursor back one word.
+  - `Option + F`: Move the cursor forward one word.
+
+=== Editing:
+  - `Ctrl + U`: Delete from the cursor position to the beginning of the line.
+  - `Ctrl + K`: Delete from the cursor position to the end of the line.
+  - `Ctrl + W`: Delete the word before the cursor.
+  - `Ctrl + Y`: Paste the last deleted text.
+  - `Ctrl + L`: Clear the screen (similar to the `clear` command).
+  - `Ctrl + D`: Exit the shell (if the input line is empty).
+  - `Ctrl + C`: Cancel the current command or process.
+
+=== History:
+  - `Ctrl + P` or `Up Arrow`: Previous command in history.
+  - `Ctrl + N` or `Down Arrow`: Next command in history.
+  - `Ctrl + R`: Search command history (start typing to search, press `Ctrl + R` again to cycle through matches).
+  - `Ctrl + G`: Escape from history search mode.

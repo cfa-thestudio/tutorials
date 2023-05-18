@@ -1,0 +1,185 @@
+= Bash Cheat Sheet - Basic Commands
+
+== Display Information
+
+Print text to the terminal
+
+[source,bash]
+----
+echo 'Hello, World!'
+----
+
+View the contents of a file
+[source,bash]
+----
+cat <filename>
+----
+
+Show a list of files and directories
+[source,bash]
+----
+ls
+----
+
+
+Display the current directory
+[source,bash]
+----
+pwd
+----
+
+
+View manual pages for a command
+[source,bash]
+----
+man <command>
+----
+
+== Navigation and File Operations
+
+Change directory
+[source,bash]
+----
+cd <directory>
+----
+
+Create a new directory
+[source,bash]
+----
+mkdir <directory>
+----
+
+Create an empty file
+[source,bash]
+----
+touch <filename>
+----
+
+Copy files or directories
+[source,bash]
+----
+cp <source> <destination>
+----
+
+Move or rename files or directories
+[source,bash]
+----
+mv <source> <destination>
+----
+
+Remove files or directories
+[source,bash]
+----
+rm <file_or_directory>
+----
+
+Remove files or directories recursively
+[source,bash]
+----
+rm -r <directory>
+----
+
+== File Manipulation
+
+Concatenate files and display the output
+[source,bash]
+----
+cat <file1> <file2>
+----
+
+Display the first few lines of a file
+[source,bash]
+----
+head <filename>
+----
+
+Display the last few lines of a file
+[source,bash]
+----
+tail <filename>
+----
+
+Search for a pattern in a file
+[source,bash]
+----
+grep <pattern> <filename>
+----
+
+Find files matching a pattern
+[source,bash]
+----
+find <directory> -name "<pattern>"
+----
+
+== File Permissions
+
+Change file permissions
+[source,bash]
+----
+chmod <permissions> <filename>
+----
+
+[source,bash]
+----
+Example: chmod 755 script.sh
+----
+
+Change ownership of a file or directory
+[source,bash]
+----
+chown <user>:<group> <file_or_directory>
+----
+
+[source,bash]
+----
+Example: chown john:users myfile.txt
+----
+
+== File Compression and Archiving
+
+Create a ZIP archive
+[source,bash]
+----
+zip <archive_name>.zip <file1> <file2>
+----
+
+Extract files from a ZIP archive
+[source,bash]
+----
+unzip <archive_name>.zip
+----
+
+Create a TAR archive
+[source,bash]
+----
+tar -cvf <archive_name>.tar <file1> <file2>
+----
+
+Extract files from a TAR archive
+[source,bash]
+----
+tar -xvf <archive_name>.tar
+----
+
+== Process Management
+
+List running processes
+[source,bash]
+----
+ps
+----
+
+Kill a process by its process ID (PID)
+[source,bash]
+----
+kill <PID>
+----
+
+Terminate a process by its name
+[source,bash]
+----
+pkill <process_name>
+----
+
+This cheat sheet provides a quick reference for basic Bash commands to help you navigate and perform common operations in the Bash shell. Remember to consult the Bash documentation and additional resources for more in-depth information and advanced features.
+
