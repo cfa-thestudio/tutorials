@@ -1,0 +1,32 @@
+= the tutorials
+
+== the video
+video::0hQfAju50A8[youtube,width=600,height=360,align=left]
+
+
+== the steps
+
+1. create ssh key
+
+[,bash]
+-----
+ssh-keygen -t ed25519 -C "your_email@example.com"
+-----
+
+2. copy ssh key
+
+[,bash]
+-----
+pbcopy < ~/.ssh/id_ed25519.pub
+-----
+
+3. add ssh key to github
+4. test ssh connection
+
+
+
+
+== the links
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh[github ssh tutorial]
+
