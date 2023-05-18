@@ -6,24 +6,32 @@ video::0hQfAju50A8[youtube,width=600,height=360,align=left]
 
 == the steps
 
-1. create ssh key
+=== create ssh key
+Create a ssh by pasting this snippet into your terminal. Change the email address to the email associated with your github account.
 
 [,bash]
 -----
 ssh-keygen -t ed25519 -C "your_email@example.com"
 -----
 
-2. copy ssh key
+=== copy ssh key
+
+The previous step saved a file with a key in your computer. In order to copy the content of that file into your clipboard, run this command in your terminal.
 
 [,bash]
 -----
 pbcopy < ~/.ssh/id_ed25519.pub
 -----
 
-3. add ssh key to github
-4. test ssh connection
+After running the command, press "ctrl+v" to see if the content was copied.
 
+=== add ssh key to github
 
+Go to your github account settings, create a ssh key and paste the content - see video. 
+
+=== test ssh connection
+
+Try to clone a private repository using your ssh connetcion. See video for instructions. If the clonning process is successful, then you are all set.
 
 
 == the links
