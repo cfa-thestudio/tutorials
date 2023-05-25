@@ -1,40 +1,41 @@
-= the tutorials
+= Setting Up SSH Key for GitHub Access
+
+When working with GitHub, setting up an SSH key can streamline your authentication process and provide a secure way to access your repositories. This tutorial will guide you through the steps required to create and add an SSH key to your GitHub account, allowing you to securely connect to GitHub repositories without the need for a username and password.
 
 == the video
-video::0hQfAju50A8[youtube,width=600,height=360,align=left]
 
+video::[insert_video_url_here][youtube,width=600,height=360,align=left]
 
-== the steps
+== the Steps
 
-=== create ssh key
-Create a ssh by pasting this snippet into your terminal. Change the email address to the email associated with your github account.
+=== 1 | Create SSH Key
 
-[,bash]
+Create an SSH key by pasting this snippet into your terminal. Make sure to change the email address to the email associated with your GitHub account.
+
+[source,bash]
 -----
 ssh-keygen -t ed25519 -C "your_email@example.com"
 -----
 
-=== copy ssh key
+=== 2 | Copy SSH Key
 
-The previous step saved a file with a key in your computer. In order to copy the content of that file into your clipboard, run this command in your terminal.
+The previous step saved a file with a key on your computer. To copy the content of that file into your clipboard, run this command in your terminal.
 
-[,bash]
+[source,bash]
 -----
 pbcopy < ~/.ssh/id_ed25519.pub
 -----
 
-After running the command, press "ctrl+v" to see if the content was copied.
+After running the command, press "ctrl+v" to check if the content was copied successfully.
 
-=== add ssh key to github
+=== 3 | Add SSH Key to GitHub
 
-Go to your github account settings, create a ssh key and paste the content - see video. 
+Go to your GitHub account settings, create an SSH key, and paste the content. You can refer to the video for detailed instructions.
 
-=== test ssh connection
+=== 4 | Test SSH Connection
 
-Try to clone a private repository using your ssh connetcion. See video for instructions. If the clonning process is successful, then you are all set.
-
+Try to clone a private repository using your SSH connection. Refer to the video for instructions. If the cloning process is successful, then you are all set.
 
 == the links
 
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh[github ssh tutorial]
-
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh[GitHub SSH Tutorial]

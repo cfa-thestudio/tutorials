@@ -1,0 +1,111 @@
+= Repository connection
+
+Before starting working on your assignment, first import your remote repository (hosted on github) into your local machine. This process will download the content of the repository stored on github into your computer. There are two routines depending on if you are doing it for the first time or if you already clonned the repository and just need to update it. 
+
+== the video
+
+video::[insert_video_url_here][youtube,width=600,height=360,align=left]
+
+== the steps  
+
+=== 1 | first time
+
+If you don't have your remote repository clonned into your local machine, you have to do establish the connection for the first time.  
+
+[WARNING]
+====
+if you already have the repository clonned into your computer, you can skip this step
+====
+
+Open the terminal on your laptop.
+
+Change the current directory to your desktop:
+
+[source,bash]
+----
+cd ~/desktop
+----
+
+Clone your personal repository using the SSH URL:
+
+[source,bash]
+----
+git clone <your repo ssh url>
+----
+
+Change to the newly created repository directory:
+
+[source,bash]
+----
+cd <your repo name>
+----
+
+Create and switch to a new branch called "learner":
+
+[source,bash]
+----
+git checkout -b learner
+----
+
+Push the new branch to the remote repository:
+
+[source,bash]
+----
+git push -u origin learner
+----
+
+==== all in one 
+
+[source,bash]
+----
+cd ~/desktop
+git clone <your repo ssh url>
+cd <your repo name>
+git checkout -b learner
+git push -u origin learner
+----
+
+=== 2 | susequent times
+
+If you already have the repository cloned into your repository, you don't need to clone it again. You just need to update the repository with any changes that might have happened in the remote repository (stored on github). For this, we will use a differnt routine.
+
+Open the terminal on your laptop.
+
+Change the current directory to your repository on the desktop:
+
+[source,bash]
+----
+cd ~/desktop/<your repo name>
+----
+
+Switch to the "learner" branch:
+
+[source,bash]
+----
+git checkout -B learner
+----
+
+Pull the latest changes from the remote repository:
+
+[source,bash]
+----
+git pull
+----
+
+==== all in one 
+[source,bash]
+----
+cd ~/desktop/<your repo name>
+git checkout -B learner
+git pull
+----
+
+== additional notes
+
+- Make sure to replace `<your repo ssh url>` with the SSH URL of your personal repository.
+- Replace `<your repo name>` with the name of your repository.
+- For subsequent times, ensure that you are in the correct directory before running the commands.
+- If you encounter any issues, feel free to seek assistance from your instructor or teaching assistant.
+
+
+

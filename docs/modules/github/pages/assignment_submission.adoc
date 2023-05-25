@@ -1,0 +1,70 @@
+= Submitting an Assignment
+
+== the video
+
+video::[insert_video_url_here][youtube,width=600,height=360,align=left]
+
+== the steps
+
+To submit an assignment using Git, follow the steps below:
+
+Open your command line or terminal.
+
+Navigate to your desktop using the `cd` command. For example, if your desktop path is `~/desktop`, enter the following command:
+[source,bash]
+----
+cd ~/desktop
+----
+
+Change into the cloned repository's directory.
+   Run the command:
+[source,bash]
+----
+cd <your_repo_url>
+----
+
+Create a new branch for your submission.
+   Execute the following command:
+[source,bash]
+----
+git branch learner
+----
+
+Add your assignment files to the repository.
+Use the following command to add all files and directories:
+[source,bash]
+----
+git add .
+----
+
+Commit your changes with a descriptive message about the changes you made.
+Replace `<small_message>` with a concise summary of your changes.
+Run the command:
+[source,bash]
+----
+git commit -m "<small_message>"
+----
+
+Push your branch to the remote repository.
+Use the following command:
+[source,bash]
+----
+git push origin
+----
+
+Once you have completed these steps, your assignment will be submitted.
+Notify your instructor or project coordinator about your submission, providing them with any necessary details or instructions they require.
+
+Remember to review any submission guidelines provided by your instructor or project coordinator, as they may have additional instructions or requirements specific to your assignment.
+
+== all in one
+
+[source,bash]
+----
+cd ~/desktop
+cd <your_repo_url>
+git branch learner
+git add .
+git commit -m "<small_message>"
+git push origin
+----
