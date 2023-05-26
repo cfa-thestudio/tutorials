@@ -105,7 +105,7 @@ git pull
 - Make sure to replace `<your repo ssh url>` with the SSH URL of your personal repository.
 - Replace `<your repo name>` with the name of your repository.
 - For subsequent times, ensure that you are in the correct directory before running the commands.
-- If you encounter any issues, feel free to seek assistance from your instructor or teaching assistant.
+- If you encounter any issues, feel free to seek assistance from your educator.
 
 
 
