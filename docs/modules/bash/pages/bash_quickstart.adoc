@@ -1,10 +1,17 @@
 = Bash Quick Start Tutorial
 
-== Step 1: Open a Terminal
+== the video
+
+video::[insert_video_url_here][youtube,width=600,height=360,align=left]
+
+
+== the steps
+
+=== 1 | Open a Terminal
 
 Launch a terminal application on your operating system. In Linux and macOS, you can typically find a terminal in the system's applications or utilities.
 
-== Step 2: Basic Commands
+=== 2 | Basic Commands
 
 Once the terminal is open, you can start entering commands. Here are some basic commands to get you started:
 
@@ -15,7 +22,7 @@ Once the terminal is open, you can start entering commands. Here are some basic 
 
 Try running these commands to familiarize yourself with the basics of Bash.
 
-== Step 3: File Operations
+=== 3 | File Operations
 
 Bash allows you to perform various file operations. Here are a few commands to work with files:
 
@@ -26,9 +33,9 @@ Bash allows you to perform various file operations. Here are a few commands to w
 
 Experiment with these commands to create, copy, move, and delete files.
 
-== Step 4: Shell Scripting
+=== 4 | Shell Scripting
 
-Bash is not just a command interpreter; it is also a scripting language. You can create shell scripts to automate tasks and perform more complex operations. Follow these steps to create a simple shell script:
+Bash is not just a command interpreter; it is also a scripting language. You can create shell scripts to automate tasks and perform more complex operations. Follow these  to create a simple shell script:
 
 Open a text editor and create a new file with a `.sh` extension (e.g., `myscript.sh`).
 
@@ -49,12 +56,12 @@ bash myscript.sh
 
 The script will output "Hello, world!" on the terminal.
 
-== Step 5: Further Learning
+== further learning
 
 Bash has many more features and capabilities. Here are some resources to further your learning:
 
 - **Bash Documentation**: Refer to the Bash documentation (`man bash`) for detailed information about the shell's features and syntax.
-- **Online Tutorials**: Explore online tutorials and guides that provide step-by-step instructions and examples for Bash scripting.
+- **Online Tutorials**: Explore online tutorials and guides that provide by-instructions and examples for Bash scripting.
 - **Practice and Experiment**: The best way to improve your Bash skills is by practicing and experimenting. Try solving coding challenges, automate repetitive tasks, and explore advanced topics like functions, conditionals, loops, and system administration.
 
 Bash is a powerful tool that can enhance your productivity and automate various tasks. By learning more about its features and practicing regularly, you can become proficient in Bash scripting and efficiently manage your command-line tasks.

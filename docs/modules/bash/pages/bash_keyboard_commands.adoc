@@ -1,5 +1,7 @@
 = Bash Keyboard Commands 
 
+Working efficiently in the console terminal requires mastering various keyboard shortcuts. These shortcuts can significantly streamline your workflow and help you navigate and interact with the terminal more effectively. Whether you're a beginner or an experienced user, knowing these keyboard shortcuts will save you time and boost your productivity.
+
 == Linux
 
 === Navigation:

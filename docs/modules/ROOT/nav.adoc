@@ -2,6 +2,9 @@
 * xref:github:github.adoc[github]
 ** xref:github:github_quick_start.adoc[quick start]
 ** xref:github:github_ssh.adoc[ssh connection]
+** xref:github:repository_connection.adoc[repository connection]
+** xref:github:assignment_submission.adoc[assignment submission]
+
 
 * xref:bash:bash.adoc[bash]
 ** xref:bash:bash_quickstart.adoc[quick start]

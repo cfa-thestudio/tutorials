@@ -1,5 +1,7 @@
 = Bash Cheat Sheet - Basic Commands
 
+In this comprehensive cheat sheet, you'll find a collection of commonly used Bash commands that cover a wide range of tasks. From basic file and directory operations to process management, text manipulation, and system administration, these commands will empower you to navigate and control your Unix-based operating system with ease.
+
 == Display Information
 
 Print text to the terminal
