@@ -4,7 +4,7 @@ Before starting working on your assignment, first import your remote repository 
 
 == the video
 
-video::[insert_video_url_here][youtube,width=600,height=360,align=left]
+video::[https://youtu.be/1ECQ753CXHM][youtube,width=600,height=360,align=left]
 
 == the steps  
 

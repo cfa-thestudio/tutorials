@@ -2,9 +2,8 @@
 
 == the video
 
-video::[insert_video_url_here][youtube,width=600,height=360,align=left]
+video::[https://youtu.be/QnWfbNzlGzo][youtube,width=600,height=360,align=left]
 
-== the steps
 
 To submit an assignment using Git, follow the steps below:
 
@@ -20,14 +19,7 @@ Change into the cloned repository's directory.
    Run the command:
 [source,bash]
 ----
-cd <your_repo_url>
-----
-
-Create a new branch for your submission.
-   Execute the following command:
-[source,bash]
-----
-git branch learner
+cd <your_repo_locationl>
 ----
 
 Add your assignment files to the repository.
@@ -52,18 +44,16 @@ Use the following command:
 git push origin
 ----
 
-Once you have completed these steps, your assignment will be submitted.
-Notify your instructor or project coordinator about your submission, providing them with any necessary details or instructions they require.
+Open your remote repository on github and check if your push went through. 
+Create a pull request and leave any comments you find necessary. 
 
-Remember to review any submission guidelines provided by your instructor or project coordinator, as they may have additional instructions or requirements specific to your assignment.
 
 == all in one
 
 [source,bash]
 ----
 cd ~/desktop
-cd <your_repo_url>
-git branch learner
+cd <your_repo_locationl>
 git add .
 git commit -m "<small_message>"
 git push origin

@@ -1,9 +1,5 @@
 = GitHub getting started
 
-== the video
-
-video::[insert_video_url_here][youtube,width=600,height=360,align=left]
-
 == the steps
 
 === 1 | Create a GitHub Account
