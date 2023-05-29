@@ -4,7 +4,7 @@ When working with GitHub, setting up an SSH key can streamline your authenticati
 
 == the video
 
-video::[https://youtu.be/vGjwMOL70S4][youtube,width=600,height=360,align=left]
+video::vGjwMOL70S4[youtube, width=640, height=480, align=left]
 
 == the steps
 
