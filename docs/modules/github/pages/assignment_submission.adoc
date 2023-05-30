@@ -9,10 +9,10 @@ To submit an assignment using Git, follow the steps below:
 
 Open your command line or terminal.
 
-Navigate to your desktop using the `cd` command. For example, if your desktop path is `~/desktop`, enter the following command:
+Navigate to your desktop using the `cd` command. For example, if your desktop path is `~/Desktop`, enter the following command:
 [source,bash]
 ----
-cd ~/desktop
+cd ~/Desktop
 ----
 
 Change into the cloned repository's directory.
@@ -52,7 +52,7 @@ Create a pull request and leave any comments you find necessary.
 
 [source,bash]
 ----
-cd ~/desktop
+cd ~/Desktop
 cd <your_repo_locationl>
 git add .
 git commit -m "<small_message>"

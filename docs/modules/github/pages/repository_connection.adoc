@@ -23,7 +23,7 @@ Change the current directory to your desktop:
 
 [source,bash]
 ----
-cd ~/desktop
+cd ~/Desktop
 ----
 
 Clone your personal repository using the SSH URL:
@@ -58,7 +58,7 @@ git push -u origin learner
 
 [source,bash]
 ----
-cd ~/desktop
+cd ~/Desktop
 git clone <your repo ssh url>
 cd <your repo name>
 git checkout -b learner
@@ -75,7 +75,7 @@ Change the current directory to your repository on the desktop:
 
 [source,bash]
 ----
-cd ~/desktop/<your repo name>
+cd ~/Desktop/<your repo name>
 ----
 
 Switch to the "learner" branch:
@@ -95,7 +95,7 @@ git pull
 ==== all in one 
 [source,bash]
 ----
-cd ~/desktop/<your repo name>
+cd ~/Desktop/<your repo name>
 git checkout -B learner
 git pull
 ----
