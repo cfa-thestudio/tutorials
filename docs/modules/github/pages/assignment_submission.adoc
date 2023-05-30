@@ -2,7 +2,7 @@
 
 == the video
 
-video::[https://youtu.be/JsG_Ma1hGbk][youtube,width=600,height=360,align=left]
+video::JsG_Ma1hGbk[youtube, width=640, height=480, align=left]
 
 
 To submit an assignment using Git, follow the steps below:
