@@ -13,17 +13,6 @@ GitHub offers several benefits that make it a popular choice among developers:
 - *Project Management*: GitHub offers project management tools such as issue tracking, project boards, and milestones. These tools help teams organize and prioritize their work, track progress, and communicate effectively.
 - *Community and Open Source*: GitHub has a large community of developers, making it a hub for open source projects. It provides a platform for developers to contribute to existing projects, discover new projects, and showcase their work.
 
-== Getting Started with GitHub
-
-To get started with GitHub, follow these steps:
-
-1. *Create an Account*: Go to the GitHub website (link:https://github.com[http://github.com/]) and sign up for a new account by providing the required information. Choose a unique username and a strong password.
-2. *Set Up Git*: link:https://git-scm.com/book/en/v2/Getting-Started-Installing-Git[Install Git] on your computer if you haven't already. Configure your Git identity by setting your username and email.
-3. *Create a Repository*: Once you're logged in to GitHub, create a new repository to store your code. Give it a name, choose the visibility (public or private), and add an optional description.
-4. *Clone the Repository*: Clone the repository to your local machine using the Git clone command. This creates a local copy of the repository on your computer.
-5. *Make Changes and Commit*: Make changes to the files in your repository using your preferred code editor. Use Git commands like `git add .` to stage changes and `git commit -m "Your commit message"` to commit them.
-6. *Push Changes to GitHub*: Push your local changes to the GitHub repository using the `git push` command. This updates the repository with your latest changes.
-
 == Further Learning
 
 GitHub offers a wealth of resources to help you learn more about its features and best practices. Here are some recommended resources:
