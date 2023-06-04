@@ -19,7 +19,7 @@ Change into the cloned repository's directory.
    Run the command:
 [source,bash]
 ----
-cd <your_repo_locationl>
+cd <your_repo_location>
 ----
 
 Add your assignment files to the repository.
@@ -41,7 +41,7 @@ Push your branch to the remote repository.
 Use the following command:
 [source,bash]
 ----
-git push origin
+git push origin learner
 ----
 
 Open your remote repository on github and check if your push went through. 
@@ -53,8 +53,8 @@ Create a pull request and leave any comments you find necessary.
 [source,bash]
 ----
 cd ~/Desktop
-cd <your_repo_locationl>
+cd <your_repo_location>
 git add .
 git commit -m "<small_message>"
-git push origin
+git push origin learner
 ----
