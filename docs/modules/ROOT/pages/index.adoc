@@ -2,9 +2,9 @@
 
 Hello, *the learner*.
 
-We're excited to introduce you to a set of tutorials that will make your learning experience much easier and help you overcome any doubts you may have about the tools we've been using. These tutorials are designed to simplify complex concepts and guide you step-by-step through the process, ensuring that you can quickly grasp the material and apply it effectively.
+I am excited to introduce you to a set of tutorials that will make your learning experience much easier and help you overcome any doubts you may have about the tools you’ve been using. These tutorials are designed to simplify complex concepts and guide you step by step, ensuring that you can quickly grasp the material and apply it effectively.
 
-By accessing these tutorials, you'll find solutions to common challenges and gain a deeper understanding of the tools at your disposal. We want to ensure that you have all the resources you need to succeed and make your life as a learner more convenient and enjoyable.
+By accessing these tutorials, you’ll find solutions to common challenges and gain a deeper understanding of the tools at your disposal. I want to ensure that you have all the resources you need to succeed and make your life as a learner more convenient and enjoyable.
 
 *IO* +
 @ *the studIO* +
