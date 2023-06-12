@@ -1,16 +1,14 @@
-= GitHub getting started
+= GitHub Getting Started
 
 == the steps
 
 === 1 | Create a GitHub Account
 
-Go to the GitHub website (github.com) and sign up for a new account by providing the required information.
-Choose a unique username and a strong password.
+Go to the GitHub website (https://github.com/[github.com, window=_blank]) and sign up for a new account by providing the required information. Choose a unique username and a strong password.
 
 === 2 | Set Up Git
 
-Install Git on your computer if you haven't already. You can download it from the official Git website (git-scm.com) and follow the installation instructions for your operating system.
-Open a terminal or command prompt and configure your Git identity by setting your username and email using the following commands:
+Install Git on your computer if you haven't already. You can download it from the official Git website (https://git-scm.com/[git-scm.com, window=_blank]) and follow the installation instructions for your operating system. Open a terminal or command prompt and configure your Git identity by setting your username and email using the following commands:
 
 [,bash]
 -----
@@ -20,15 +18,11 @@ git config --global user.email "youremail@example.com"
 
 === 3 | Create a New Repository
 
-Once you're logged in to GitHub, click on the "+" sign in the top right corner and select "New repository".
-Give your repository a name, choose whether it should be public or private, and add an optional description.
-Click "Create repository" to create your new repository on GitHub.
+Once you're logged in to GitHub, click on the “+” sign in the top right corner and select “New repository”. Give your repository a name, choose whether it should be public or private, and add an optional description. Click “Create repository“ to create your new repository on GitHub.
 
 === 4 | Clone the Repository
 
-On the repository page, click on the green "Code" button and copy the URL of your repository.
-Open a terminal or command prompt and navigate to the directory where you want to clone the repository.
-Run the following command, replacing `<repository-url>` with the URL you copied:
+On the repository page, click on the green ”Code” button and copy the URL of your repository. Open a terminal or command prompt and navigate to the directory where you want to clone the repository. Run the following command, replacing `<repository-url>` with the URL you copied:
 [,bash]
 -----
 git clone <repository-url>
@@ -36,10 +30,7 @@ git clone <repository-url>
 
 === 5 | Make Changes and Commit
 
-Open the cloned repository in your preferred code editor.
-Make any necessary changes to the files in your repository.
-Once you're ready to save your changes, open a terminal or command prompt in the repository directory.
-Use the following commands to stage your changes and commit them with a descriptive message:
+Open the cloned repository in your preferred code editor. Make any necessary changes to the files in your repository. Once you're ready to save your changes, open a terminal or command prompt in the repository directory. Use the following commands to stage your changes and commit them with a descriptive message:
 
 [,bash]
 -----
@@ -49,8 +40,8 @@ git commit -m "Your commit message"
 
 === 6 | Push Changes to GitHub
 
-After committing your changes locally, you can push them to your GitHub repository.
-Run the following command to push your changes:
+After committing your changes locally, you can push them to your GitHub repository. Run the following command to push your changes:
+
 [,bash]
 -----
 git push origin main
@@ -58,24 +49,24 @@ git push origin main
 
 === 7 | Branching and Pull Requests (Optional)
 
-If you're working on a collaborative project or want to experiment with new features without affecting the main codebase, consider branching.
-To create a new branch, use the following command:
+If you're working on a collaborative project or want to experiment with new features without affecting the main codebase, consider branching. To create a new branch, use the following command:
 
 [,bash]
 -----
-git checkout -b branch-name
+git checkout -b <branch-name>
 -----
 
 Make changes, commit them, and push the branch to GitHub:
 
 [,bash]
 -----
-git push origin branch-name
+git push origin <branch-name>
 -----
 
 If you want to merge your changes into the main branch, create a pull request on the GitHub website.
 
 That's it! You've completed the basic steps to start using GitHub. Remember to explore additional features and workflows offered by GitHub, such as issues, project boards, and collaborating with others.
 
-== the links
-link:https://docs.github.com[GitHub documentation]
+== the links    
+
+link:https://docs.github.com[GitHub documentation, window=_blank]
