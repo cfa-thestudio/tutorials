@@ -44,7 +44,7 @@ Use the following command:
 git push origin learner
 ----
 
-Open your remote repository on github and check if your push went through. 
+Open your remote repository on GitHub and check if your push went through. 
 Create a pull request and leave any comments you find necessary. 
 
 

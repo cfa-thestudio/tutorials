@@ -1,4 +1,4 @@
-= Setting Up SSH Key for GitHub Access
+= Setting Up an SSH Key for GitHub Access
 
 When working with GitHub, setting up an SSH key can streamline your authentication process and provide a secure way to access your repositories. This tutorial will guide you through the steps required to create and add an SSH key to your GitHub account, allowing you to securely connect to GitHub repositories without the need for a username and password.
 
@@ -8,7 +8,7 @@ video::vGjwMOL70S4[youtube, width=640, height=480, align=left]
 
 == the steps
 
-=== 1 | Create SSH Key
+=== 1 | Create an SSH Key
 
 Create an SSH key by pasting this snippet into your terminal. Make sure to change the email address to the email associated with your GitHub account.
 
@@ -17,22 +17,22 @@ Create an SSH key by pasting this snippet into your terminal. Make sure to chang
 ssh-keygen -t ed25519 -C "your_email@example.com"
 -----
 
-=== 2 | Copy SSH Key
+=== 2 | Copy the SSH Key
 
-The previous step saved a file with a key on your computer. To copy the content of that file into your clipboard, run this command in your terminal.
+In the previous step, you saved a file with a key on your computer. In order to copy the content of that file into your clipboard, run this command in your terminal.
 
 [source,bash]
 -----
 pbcopy < ~/.ssh/id_ed25519.pub
 -----
 
-After running the command, press "ctrl+v" to check if the content was copied successfully.
+After running the command, press `Сtrl+V` to see if the content was copied.
 
-=== 3 | Add SSH Key to GitHub
+=== 3 | Add your SSH Key to GitHub
 
 Go to your GitHub account settings, create an SSH key, and paste the content. You can refer to the video for detailed instructions.
 
-=== 4 | Test SSH Connection
+=== 4 | Test the SSH Connection
 
 Try to clone a private repository using your SSH connection. Refer to the video for instructions. If the cloning process is successful, then you are all set.
 

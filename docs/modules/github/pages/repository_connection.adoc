@@ -1,6 +1,6 @@
-= Repository connection
+= Repository Сonnection
 
-Before starting working on your assignment, first import your remote repository (hosted on github) into your local machine. This process will download the content of the repository stored on github into your computer. There are two routines depending on if you are doing it for the first time or if you already clonned the repository and just need to update it. 
+Before starting working on your assignment, first, import your remote repository hosted on GitHub to your local machine. This process will download the content of the repository stored on GitHub to your computer. There are two routines that depend on whether you are doing it for the first time or if you already cloned the repository and just need to update it.
 
 == the video
 
@@ -10,11 +10,11 @@ video::sXdpsSGSex4[youtube, width=640, height=480, align=left]
 
 === 1 | first time
 
-If you don't have your remote repository clonned into your local machine, you have to do establish the connection for the first time.  
+If you don’t have your remote repository cloned to your local machine, you need to establish the connection for the first time.
 
 [WARNING]
 ====
-if you already have the repository clonned into your computer, you can skip this step
+If you have already cloned the repository to your computer, you can skip this step.
 ====
 
 Open the terminal on your laptop.
@@ -67,7 +67,7 @@ git push -u origin learner
 
 === 2 | subsequent times
 
-If you already have the repository cloned into your repository, you don't need to clone it again. You just need to update the repository with any changes that might have happened in the remote repository (stored on github). For this, we will use a differnt routine.
+If you already have the repository cloned into your repository, you don’t need to clone it again. You just need to update the repository with any changes that might have happened in the remote repository stored on GitHub. For this, you will use a different routine.
 
 Open the terminal on your laptop.
 
@@ -102,9 +102,9 @@ git pull
 
 == additional notes
 
-- Make sure to replace `<your repo ssh url>` with the SSH URL of your personal repository.
-- Replace `<your repo name>` with the name of your repository.
-- For subsequent times, ensure that you are in the correct directory before running the commands.
+- Make sure to replace `<your repo ssh url>` with the SSH URL of your personal repository
+- Replace `<your repo name>` with the name of your repository
+- For subsequent times, ensure that you are in the correct directory before running the commands
 - If you encounter any issues, feel free to seek assistance from your educator.
 
 

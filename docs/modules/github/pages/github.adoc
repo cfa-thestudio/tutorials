@@ -8,17 +8,34 @@ GitHub allows you to create and maintain repositories, track changes to files, a
 
 GitHub offers several benefits that make it a popular choice among developers:
 
-- *Version Control*: GitHub uses Git, a distributed version control system, which allows you to track changes to files over time. This makes it easy to revert to previous versions, collaborate with others, and maintain a comprehensive history of your codebase.
-- *Collaboration*: GitHub provides a platform for teams to work together on projects. It enables collaboration through features like pull requests, which allow for code review and discussion before merging changes into the main codebase.
-- *Project Management*: GitHub offers project management tools such as issue tracking, project boards, and milestones. These tools help teams organize and prioritize their work, track progress, and communicate effectively.
-- *Community and Open Source*: GitHub has a large community of developers, making it a hub for open source projects. It provides a platform for developers to contribute to existing projects, discover new projects, and showcase their work.
+- *Version Control*
++
+GitHub uses Git, a distributed version control system, which allows you to track changes to files over time. This makes it easy to revert to previous versions, collaborate with others, and maintain a comprehensive history of your codebase.
+
+- *Collaboration*
++
+GitHub provides a platform for teams to work together on projects. It enables collaboration through features like pull requests, which allow for code review and discussion before merging changes into the main codebase.
+
+- *Project Management*
++
+GitHub offers project management tools such as issue tracking, project boards, and milestones. These tools help teams organize and prioritize their work, track progress, and communicate effectively.
+
+- *Community and Open Source*
++
+GitHub has a large community of developers, making it a hub for open-source projects. It provides a platform for developers to contribute to existing projects, discover new projects, and showcase their work.
 
 == Further Learning
 
 GitHub offers a wealth of resources to help you learn more about its features and best practices. Here are some recommended resources:
 
-- *GitHub Documentation*: Visit the official GitHub documentation (link:https://docs.github.com[https://docs.github.com]) for detailed guides and reference materials on various topics.
-- *GitHub Learning Lab*: Explore the GitHub Learning Lab (link:https://lab.github.com[https://lab.github.com]) for interactive tutorials and courses on Git, GitHub, and related topics.
+- *GitHub Documentation*
++
+Visit the official GitHub documentation (link:https://docs.github.com[https://docs.github.com]) for detailed guides and reference materials on various topics.
+
+- *GitHub Learning Lab*
++
+Explore the GitHub Learning Lab (link:https://lab.github.com[https://lab.github.com]) for interactive tutorials and courses on Git, GitHub, and related topics.
+
 - *GitHub Community*: Engage with the GitHub community through forums, discussions, and the GitHub Community Forum (link:https://github.community[https://github.community]).
 
 GitHub is a versatile platform that can greatly enhance your development workflow and collaboration. With its extensive features and vibrant community, it has become an integral part of modern software development.
