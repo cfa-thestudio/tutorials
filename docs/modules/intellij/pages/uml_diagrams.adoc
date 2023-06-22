@@ -1,0 +1,21 @@
+= Creating UML Diagrams
+
+When working with IntelliJ Ultimate, you get a set of features that could really make your work easier when dealing with a large code base. The creation of UML can help developers navigate source code easier, making the relationship between the classes and the interfaces more visual.
+
+== the video
+
+video::VhzM4Dno9Jg[youtube, width=640, height=480, align=left]
+
+
+== the features
+
+These are some of the features covered on this tutorial:
+
+* Create a basic UML diagram
+* Show dependencies
+* Fix the design
+* Show methods
+* Show constructors
+* Show class fields 
+* Show class getters and setters (on the button widget, getters are represented with a small green circle and the setters with a red circle)
+

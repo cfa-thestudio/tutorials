@@ -12,3 +12,8 @@
 ** xref:bash:bash_keyboard_commands.adoc[keyboard]
 
 
+* IntelliJ
+** xref:intellij:uml_diagrams.adoc[UML diagrams]
+
+
+
