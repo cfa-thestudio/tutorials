@@ -15,5 +15,6 @@
 * IntelliJ
 ** xref:intellij:uml_diagrams.adoc[UML diagrams]
 
-
-
+* tomcat 
+** xref:tomcat:installing.adoc[installing and running]
+** xref:tomcat:deploying.adoc[deploying a web app]
