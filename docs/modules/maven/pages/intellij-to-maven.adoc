@@ -15,7 +15,7 @@ video::RlvUVMFPjAI[youtube, width=640, height=480, align=left]
 If your project still has the blue `src` folder marked as “Sources
 Root“, do the following:
 
-[arabic]
+[arabic, start=4]
 . Right-click on `src` folder and choose “Mark directory as“, then
 choose “Unmark as Sources Root“.
 . Right-click on the `java` folder inside `src\test` and choose “Mark
