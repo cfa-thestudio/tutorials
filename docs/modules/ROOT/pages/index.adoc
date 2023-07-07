@@ -1,4 +1,5 @@
 = the tutorials
+:page-layout: component
 
 Hello, *the learner*.
 
