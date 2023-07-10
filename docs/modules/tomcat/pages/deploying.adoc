@@ -29,7 +29,7 @@ image::web-support.png[Check “Web Application” and hit “Ok”, 550]
 ----
     
 . Add the Servlet API dependency to `pom.xml`.
-    
++
 [source,xml]
 ----
 <dependencies>
