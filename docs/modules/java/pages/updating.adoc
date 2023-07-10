@@ -17,7 +17,7 @@ of Oracle Java SE called _OpenJDK_.
 $ sudo pacman -S jdk17-openjdk
 ----
 
-. Verify the installation by checking the version:
+. Verify the installation by checking the version.
 +
 [source,bash]
 ----
