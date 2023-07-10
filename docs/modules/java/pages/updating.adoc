@@ -2,6 +2,8 @@
 
 This guide will help you install the version 17 of Java (both the JDK and JRE). Specifically, you will install the free and open-source version implementation of Oracle Java SE – called OpenJDK.
 
+== the steps
+
 Install OpenJDK 17:
 
 [source,bash]
@@ -51,7 +53,7 @@ $ java -version
 
 The output should confirm that JDK 17 is the default version.
 
-== Update Intellij
+=== Update Intellij
 
 1. Go to "File" and click "Project Structure".
 2. In the Project Structure dialog, navigate to "Project" andd then "Project SDK".
