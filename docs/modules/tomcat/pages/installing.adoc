@@ -66,11 +66,11 @@ individual web applications deployed on the Tomcat server. It offers developers
 and application administrators an easy way to perform various application-level 
 management tasks. With the Manager GUI, you can:
 
-. Deploy new web applications to the Tomcat server
-. Undeploy or remove existing applications
-. Start, stop, and reload application
-. Monitor application status, sessions, and resource usage
-. Access application logs and perform diagnostics
+* Deploy new web applications to the Tomcat server
+* Undeploy or remove existing applications
+* Start, stop, and reload application
+* Monitor application status, sessions, and resource usage
+* Access application logs and perform diagnostics
 
 To access both the Admin GUI and the Manager GUI, you will need appropriate 
 administrative credentials defined in a file inside `tomcat/conf` called 
