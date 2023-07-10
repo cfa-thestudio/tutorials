@@ -91,7 +91,7 @@ public class HelloWorld extends HttpServlet {
 }
 ----
     
-. Set up the `web.xml` file:
+. Set up the `web.xml` file.
 +
 [source,xml]
 ----
