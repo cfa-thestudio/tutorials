@@ -41,7 +41,7 @@ $ cd utilities
 $ ln -s apache-tomcat-10.1.10 tomcat
 ----
 
-=== Configuring and Running Tomcat
+=== Configure and Run Tomcat
 
 There are two powerful tools that provide convenient ways to manage, 
 configure, and monitor your Tomcat server and its deployed applications: 
