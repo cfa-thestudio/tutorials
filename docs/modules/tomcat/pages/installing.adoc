@@ -1,64 +1,70 @@
 = Installing and Running Tomcat
-:imagesdir: images
+:imagesdir: ../images
 :figure-caption!:
 
-This guide will teach you how to install and configure Tomcat. On the next tutorial, you will further configure it to deploy a Java web application.
+== the steps
 
-== Installing
+=== Install Tomcat
 
-Download the core binary distribution (`apache-tomcat-10.1.10.tar.gz`) of Tomcat from https://tomcat.apache.org/download-10.cgi[https://tomcat.apache.org/download-10.cgi].
+[arabic]
+. Download the core binary distribution (`apache-tomcat-10.1.10.tar.gz`) of Tomcat from https://tomcat.apache.org/download-10.cgi[https://tomcat.apache.org/download-10.cgi].
 
-In your terminal, use the `tar` command to unzip the file you downloaded:
-    
+. In your terminal, use the `tar` command to unzip the file you downloaded.
++
+.Assuming the current directory is `/home/learner`
 [source,bash]
 ----
 $ tar zxvf Downloads/apache-tomcat-10.1.10.tar.gz
 ----
-[.caption]
-.Assuming current directory is `/home/learner`
-    
++
 `zxvf` are options passed to the `tar` command:
-. `z` specifies that the archive is compressed using gzip
-. `x` tells `tar` to extract the contents of the archive
-. `v` stands for "verbose" and enables the command to display detailed output
-. `f` indicates that the next argument is the filename of the archive to be processed
++
+* `z` specifies that the archive is compressed using gzip +
+* `x` tells `tar` to extract the contents of the archive +
+* `v` stands for "verbose" and enables the command to display detailed output +
+* `f` indicates that the next argument is the filename of the archive to be processed
     
-Move the newly created file (`apache-tomcat-10.1.10`) to somewhere you won't forget:
-    
+. Move the newly created file (`apache-tomcat-10.1.10`) to somewhere you won't forget.
++
+.Assuming the current directory is `/home/learner``
 [source,bash]
 ----
 $ mkdir utilities
 $ mv Downloads/apache-tomcat-10.1.10 utilities
 ----
-[.caption]
-.Assuming current directory is `/home/learner`
     
-Create a soft link to don’t have to write `apache-tomcat-10.1.10` every time you want to refer to it:
-    
+. Create a soft link to don’t have to write `apache-tomcat-10.1.10` every time you want to refer to it.
++
 [source,bash]
 ----
 $ cd utilities
 $ ln -s apache-tomcat-10.1.10 tomcat
 ----
-[.caption]
-.Assuming there is a directory called `utilities` in `/home/learner`
 
-== Configuring and Running Tomcat
+=== Configuring and Running Tomcat
 
-There are two powerful tools that provide convenient ways to manage, configure, and monitor your Tomcat server and its deployed applications: the Admin GUI and Manager GUI.
+There are two powerful tools that provide convenient ways to manage, 
+configure, and monitor your Tomcat server and its deployed applications: 
+the Admin GUI and Manager GUI.
 
-=== Admin GUI
+_Admin GUI_
 
-The Admin GUI is a comprehensive interface designed for server-wide administration and configuration. It allows system administrators and advanced users to have fine-grained control over various aspects of the Tomcat server. By accessing the Admin GUI, you can perform tasks such as:
+The Admin GUI is a comprehensive interface designed for server-wide administration 
+and configuration. It allows system administrators and advanced users to have 
+fine-grained control over various aspects of the Tomcat server. By accessing 
+the Admin GUI, you can perform tasks such as:
 
-. Viewing and modifying server status and information
-. Managing server configuration files
-. Setting up server logging and monitoring
-. Managing user authentication
+* Viewing and modifying server status and information
+* Managing server configuration files
+* Setting up server logging and monitoring
+* Managing user authentication
 
-=== Manager GUI
+_Manager GUI_
 
-The Manager GUI is a focused interface specifically designed for managing individual web applications deployed on the Tomcat server. It offers developers and application administrators an easy way to perform various application-level management tasks. With the Manager GUI, you can:
+The Manager GUI is a focused interface specifically designed for managing 
+individual web applications deployed on the Tomcat server. It offers developers 
+and application administrators an easy way to perform various application-level 
+management tasks. With the Manager GUI, you can:
 
 . Deploy new web applications to the Tomcat server
 . Undeploy or remove existing applications
@@ -66,12 +72,21 @@ The Manager GUI is a focused interface specifically designed for managing indivi
 . Monitor application status, sessions, and resource usage
 . Access application logs and perform diagnostics
 
-To access both the Admin GUI and the Manager GUI, you will need appropriate administrative credentials defined in a file inside `tomcat/conf` called `tomcat-users.xml`. As part of your configuration process, you will define users and assign them the necessary roles and permissions to access these two interfaces.
+To access both the Admin GUI and the Manager GUI, you will need appropriate 
+administrative credentials defined in a file inside `tomcat/conf` called 
+`tomcat-users.xml`. As part of your configuration process, you will 
+define users and assign them the necessary roles and permissions to access these two interfaces.
 
-Navigate to the `tomcat/conf` directory and open the `tomcat-users.xml` file. The `tomcat-users.xml` file is used for configuring users and roles in Apache Tomcat. It allows you to define authentication credentials and assign specific roles to control access to different functionalities and components of Tomcat. So let's create those roles.
+[arabic]
+
+. Navigate to the `tomcat/conf` directory and open the `tomcat-users.xml` file.
++
+The `tomcat-users.xml` file is used for configuring users and roles in Apache Tomcat. 
+It allows you to define authentication credentials and assign specific roles to control 
+access to different functionalities and components of Tomcat. So let's create those roles.
     
-At the bottom of the file, you will find something similiar to this piece of code commented:
-    
+. At the bottom of the file, you will find something similar to this commented piece of code.
++   
 [source,xml]
 ----
 <!--
@@ -81,24 +96,28 @@ At the bottom of the file, you will find something similiar to this piece of cod
 <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
 <user username="role1" password="<must-be-changed>" roles="role1"/>
 -->
-----
-    
+----  
 
-Uncomment and change it to the following:
-
+. Uncomment and change it to the following:
++
 [source,xml]
 ----
 <role rolename="admin-gui"/>
 <role rolename="manager-gui"/>
 <user username="andre" password="1234" roles="manager-gui, admin-gui"/>
 ----
++
+* The first two lines define two roles, "admin-gui" and "manager-gui". These roles are typically associated with the Tomcat Manager GUI and Admin GUI, respectively. Remember: roles determine the permissions and access levels for different users.
++
+* The last line defines a user with the username "andre" and the password "1234".
++
+* The user is assigned both the "admin-gui" and "manager-gui" roles, which means they have access to both the Admin GUI and Manager GUI of Tomcat.
++
+* This user will be able to perform administrative tasks and manage applications using these interfaces.
 
-The first two lines define two roles, "admin-gui" and "manager-gui". These roles are typically associated with the Tomcat Manager GUI and Admin GUI, respectively. Remember: roles determine the permissions and access levels for different users.
-
-The last line defines a user with the username "andre" and the password "1234". The user is assigned both the "admin-gui" and "manager-gui" roles, which means they have access to both the Admin GUI and Manager GUI of Tomcat. This user will be able to perform administrative tasks and manage applications using these interfaces.
-
-After this, start Tomcat by executing the `startup.sh` script:
-
+. Start Tomcat by executing the `startup.sh` script.
++
+.Assuming the current directory is `/home/learner/utilities/tomcat``
 [source,bash]
 ----
 $ bin/startup.sh
@@ -110,16 +129,18 @@ Using CLASSPATH:       /home/learner/utilities/tomcat/bin/bootstrap.jar:/home/le
 Using CATALINA_OPTS:
 Tomcat started.
 ----
-[.caption]
-.Assuming current directory is `/home/learner/utilities/tomcat`
 
-Open a browser at `localhost:8080` to check that Tomcat is successfully running. You should see a page similar to this:
-
+. Open the browser at `localhost:8080` to check that Tomcat is 
+successfully running. You should see a page similar to this one:
++
 .Tomcat homepage
-image::tomcat-homepage.png[]
-
-For information on the status of the Tomcat server or about the web applications that are deployed there, you can click on “Server Status” or “Manager App”. It will prompt you to insert your credentials, which are the ones you configured in the `tomcat-users.xml` file.
-
+image::tomcat-homepage.png[Tomcat homepage]
++
+For information on the status of the Tomcat server or about the web applications 
+that are deployed there, you can click on “Server Status” or “Manager App”. 
+It will prompt you to insert your credentials, which are the ones you 
+configured in the `tomcat-users.xml`` file.
++
 [cols=".>a,.>a", frame=none, grid=none]
 |===
 | .Server Status page
@@ -127,10 +148,10 @@ image::tomcat-server-status.png[Server Status page, 550]
 | .Manager App page
 image::tomcat-manager-app.png[Manager App page, 550]
 |===
-
-If you need to restart Tomcat, run the `shutdown.sh`` script, followed by `startup.sh` again.
-
-
++
+If you need to restart Tomcat, run the `shutdown.sh` script, followed by `startup.sh`.
++
+.Assuming the current directory is `/home/learner/utilities/tomcat``
 [source,bash]
 ----
 $ bin/shutdown.sh
@@ -151,10 +172,6 @@ Using CLASSPATH:       /home/learner/utilities/tomcat/bin/bootstrap.jar:/home/le
 Using CATALINA_OPTS:
 Tomcat started.
 ----
-[.caption]
-.Assuming current directory is `/home/learner/utilities/tomcat`
-
-Be sure to check the next tutorial for more essential configuration of Tomcat.
 
 
 
