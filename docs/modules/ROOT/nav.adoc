@@ -19,5 +19,5 @@
 ** xref:tomcat:installing.adoc[installing and running]
 ** xref:tomcat:deploying.adoc[deploying a web app]
 
-* maven
-** xref:maven:intellij-to-maven.adoc[intellij project to maven structure]
+* java
+** xref:java:updating.adoc[updating version]
