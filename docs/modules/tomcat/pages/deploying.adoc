@@ -146,7 +146,7 @@ $ bin/startup.sh
 +
 When using the Tomcat Maven Plugin to interact with the web server, authentication is necessary. For example, when deploying your application to a Tomcat server, providing a username and password in the Maven's configuration file, `settings.xml`, allows Maven to authenticate and deploy the application to the server. This file is located under `~/.m2`.
 +
-By default, you probably don't have the `settings.xml` file at all. Create it and insert the following configuration inside:
+By default, you probably don't have the `settings.xml` file at all. Create it and insert the following configuration inside.
 +  
 [source,xml]
 ----
