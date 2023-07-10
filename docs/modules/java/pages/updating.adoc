@@ -1,6 +1,6 @@
 = Updating Java
 
-This guide will help you install the version 17 of Java (both JDK and JRE). 
+This guide will help you install version 17 of Java (both JDK and JRE). 
 Specifically, you will install the free and open-source version implementation 
 of Oracle Java SE called _OpenJDK_.
 
