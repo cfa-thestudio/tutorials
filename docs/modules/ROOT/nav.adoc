@@ -5,12 +5,10 @@
 ** xref:github:repository_connection.adoc[repository connection]
 ** xref:github:assignment_submission.adoc[assignment submission]
 
-
 * xref:bash:bash.adoc[bash]
 ** xref:bash:bash_quickstart.adoc[quick start]
 ** xref:bash:bash_cheat.adoc[cheat sheet]
 ** xref:bash:bash_keyboard_commands.adoc[keyboard]
-
 
 * IntelliJ
 ** xref:intellij:uml_diagrams.adoc[UML diagrams]
@@ -18,6 +16,9 @@
 * tomcat 
 ** xref:tomcat:installing.adoc[installing and running]
 ** xref:tomcat:deploying.adoc[deploying a web app]
+
+* maven
+** xref:maven:intellij-to-maven.adoc[intellij project to maven structure]
 
 * java
 ** xref:java:updating.adoc[updating version]
