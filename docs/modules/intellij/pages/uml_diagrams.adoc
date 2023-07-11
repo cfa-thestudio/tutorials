@@ -9,7 +9,7 @@ video::VhzM4Dno9Jg[youtube, width=640, height=480, align=left]
 
 == the features
 
-These are some of the features covered on this tutorial:
+These are some of the features covered in this tutorial:
 
 * Create a basic UML diagram
 * Show dependencies
