@@ -1,9 +1,13 @@
-= Deploying a Web App with Tomcat
+= Deploying a Web App With Tomcat
 :imagesdir: ../images
 :figure-caption!:
 
-Create a new Maven project and add web support.
+== the steps
 
+[arabic]
+
+. Create a new Maven project and add web support.
++
 [cols=".>a,.>a", frame=none, grid=none]
 |===
 | .Right-click at the root of the project
@@ -12,10 +16,10 @@ image::add-framework-support.png[Right-click at the root of the project, 550]
 image::web-support.png[Check “Web Application” and hit “Ok”, 550]
 |===
     
-A new folder, called either `web` or `webapp`, will be created. Make sure to move it inside the `main` folder.
+. This will create a new folder called “web“. Move it inside the “main“ folder.
 
-Add `<packaging>war</packaging>` to the `pom.xml`:
-    
+. Add `<packaging>war</packaging>` to the `pom.xml`.
++
 [source,xml]
 ----
 <groupId>org.thestudio</groupId>
@@ -24,8 +28,8 @@ Add `<packaging>war</packaging>` to the `pom.xml`:
 <packaging>war</packaging>
 ----
     
-Add the Servlet API and the JSP API dependency to the `pom.xml`:
-    
+. Add the Servlet API dependency to `pom.xml`.
++
 [source,xml]
 ----
 <dependencies>
@@ -38,8 +42,14 @@ Add the Servlet API and the JSP API dependency to the `pom.xml`:
 </dependencies>
 ----
     
-Add the `tomcat` plugin to the Maven project. Integrating Tomcat with Maven allows for streamlined development, building, and deployment of web applications. Maven provides the Tomcat Maven Plugin, which simplifies the process of managing and deploying applications to Tomcat.
-    
+. Add the `tomcat` plugin to the Maven project.
++
+Integrating Tomcat with Maven allows for streamlined development, building, 
+and deployment of web applications. Maven provides the Tomcat Maven 
+Plugin, which simplifies the process of managing and deploying 
+applications to Tomcat.
++
+.This goes inside the `pom.xml` file
 [source,xml]
 ----
 <build>
@@ -62,8 +72,8 @@ Add the `tomcat` plugin to the Maven project. Integrating Tomcat with Maven allo
 </build>
 ----
     
-Create a `HelloWorld` class that extends from `HttpServlet`, and override the `doGet()` method.
-    
+. Create a `HelloWorld` class that extends from `HttpServlet`, and override the `doGet()` method.
++ 
 [source,java]
 ----
 public class HelloWorld extends HttpServlet {
@@ -81,8 +91,8 @@ public class HelloWorld extends HttpServlet {
 }
 ----
     
-Set up the `web.xml` file:
-    
+. Set up the `web.xml` file.
++
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
@@ -106,12 +116,13 @@ Set up the `web.xml` file:
 </web-app>
 ----
     
-Add the `manager-script` role to `tomcat-users.xml`.
-    
+. Add the `manager-script` role to the Tomcat `user`.
++  
 `manager-script` is a built-in role that provides access to the "Manager" web application via script-based management commands. This role allows users to interact with the Tomcat Manager application programmatically using scripting languages, such as Ant, Maven, or custom scripts.
-    
++   
 By assigning the `manager-script` role to a user in the `tomcat-users.xml` file, you grant them the ability to perform management operations on web applications deployed on the Tomcat server using scripts or automation tools. Such as deploying and undeploying web applications from the Tomcat server.
-    
++
+.Open the tomcat-users.xml file and edit it   
 [source,xml]
 ----
 <role rolename="admin-gui"/>
@@ -123,18 +134,20 @@ By assigning the `manager-script` role to a user in the `tomcat-users.xml` file,
 <user username="andre" password="1234" roles="admin-gui, manager-gui, manager-script"/>
 ----
     
-Since you changed server settings, you need to restart Tomcat.
-    
+. Restart Tomcat after changing server settings.
++    
 [source,bash]
 ----
 $ bin/shutdown.sh
 $ bin/startup.sh
 ----
-    
+
+. Create settings.xml.
++
 When using the Tomcat Maven Plugin to interact with the web server, authentication is necessary. For example, when deploying your application to a Tomcat server, providing a username and password in the Maven's configuration file, `settings.xml`, allows Maven to authenticate and deploy the application to the server. This file is located under `~/.m2`.
-    
-By default, you probably don't have the `settings.xml` file at all. Create it and insert the following configuration inside:
-    
++
+By default, you probably don't have the `settings.xml` file at all. Create it and insert the following configuration inside.
++  
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
@@ -385,8 +398,8 @@ under the License.
     </settings>
 ----
     
-Make sure to set the credentials inside `<server>`:
-    
+. Set the credentials inside `<server>`.
++
 [source,xml]
 ----
 <server>
@@ -395,11 +408,12 @@ Make sure to set the credentials inside `<server>`:
     <password>1234</password>
 </server>
 ----
-    
-Deploy your app by running `mvn tomcat7:deploy`. See the app running on the browser.
+
+. Deploy your app by running `mvn tomcat7:deploy`. See the app running on the browser.
+
+. See the app running on the browser.
 
 .Simple web app
 image::hello-servlet-app.png[]
 
-[NOTE]
-You only need to do `mvn deploy` the first time, after that do `mvn tomcat7:redeploy`.
+NOTE: You only need to do `mvn deploy` the first time, after that do `mvn tomcat7:redeploy`.

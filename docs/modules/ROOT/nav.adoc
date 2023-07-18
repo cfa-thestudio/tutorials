@@ -21,4 +21,4 @@
 ** xref:maven:intellij-to-maven.adoc[intellij project to maven structure]
 
 * java
-** xref:java:updating.adoc[updating version]
+** xref:java:updating.adoc[updating the version]

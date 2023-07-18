@@ -1,50 +1,56 @@
 = Updating Java
 
-This guide will help you install the version 17 of Java (both the JDK and JRE). Specifically, you will install the free and open-source version implementation of Oracle Java SE – called OpenJDK.
+This guide will help you install version 17 of Java (both JDK and JRE). 
+Specifically, you will install the free and open-source version implementation 
+of Oracle Java SE called _OpenJDK_.
 
 == the steps
 
-Install OpenJDK 17:
+=== Install OpenJDK 17
 
+[arabic]
+
+. Get OpenJDK 17.
++
 [source,bash]
 ----
 $ sudo pacman -S jdk17-openjdk
 ----
 
-Verify the installation by checking the version:
-
+. Verify the installation by checking the version.
++
 [source,bash]
 ----
 $ java -version
 ----
-
++
 You should see output similar to the following:
-
-[source,bash]
++
+[source,plaintext]
 ----
 openjdk version 17.0.1 2021-10-19
 OpenJDK Runtime Environment (build 17.0.1+1)
 OpenJDK 64-Bit Server VM (build 17.0.1+1, mixed mode, sharing)
 ----
     
-The Arch utility `archlinux-java` also lists the available Java environments, using the below command.
-
+. The Arch utility `archlinux-java` can list the available Java environments using the command below.
++
 [source,bash]
 ----
 $ archlinux-java status
 ----
 
-If it's not already, set the default Java version to JDK 17:
-
+. Set the default Java version to JDK 17.
++
 [source,bash]
 ----
 $ sudo archlinux-java set java-17-openjdk
 ----
-
++
 This command sets the default Java version for your system.
     
-Then, verify the default Java version agan:
-    
+. Verify the default Java version.
++    
 [source,bash]
 ----
 $ javac -version
@@ -53,11 +59,17 @@ $ java -version
 
 The output should confirm that JDK 17 is the default version.
 
-=== Update Intellij
+=== Update IntelliJ
 
-1. Go to "File" and click "Project Structure".
-2. In the Project Structure dialog, navigate to "Project" andd then "Project SDK".
-3. In the “SDK” dropdown menu, click the `/usr/lib/jvm/java-17-openjdk` below “Detectedd SDKs”
-4. If there is no such option, select “Add SDK” → “JDK…”.
-5. In the path bar, write “/usr/lib/jvm”, choose `java-17-openjdk` and click OK.
-6. Click “Apply” and then “OK”.
+[arabic]
+. Go to "File" → "Project Structure".
+
+. In the Project Structure dialog, navigate to "Project" → "Project SDK".
+
+. In the “SDK” dropdown menu, click the `/usr/lib/jvm/java-17-openjdk` below “Detectedd SDKs”.
+
+. If there is no such option, select “Add SDK” → “JDK…”.
+
+. In the path bar, write `/usr/lib/jvm`, choose `java-17-openjdk`, and click OK.
+
+. Click “Apply”, and then “OK”.

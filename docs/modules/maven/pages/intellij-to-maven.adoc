@@ -1,4 +1,4 @@
-= Refactor IntelliJ project to Maven structure
+= Refactor IntelliJ project to the Maven structure
 
 == the video
 
@@ -8,7 +8,7 @@ video::RlvUVMFPjAI[youtube, width=640, height=480, align=left]
 
 [arabic]
 . Open your IntelliJ project.
-. Right-click the root directory and select “Add Framework Support…“
+. Right-click the root directory and select “Add Framework Support…“.
 . On the right side of the pop-up window, select “Maven“ and select
 “OK“.
 
@@ -17,8 +17,8 @@ Root“, do the following:
 
 [arabic, start=4]
 . Right-click on `src` folder and choose “Mark directory as“, then
-choose “Unmark as Sources Root“.
+select “Unmark as Sources Root“.
 . Right-click on the `java` folder inside `src\test` and choose “Mark
 Directory as“, then “Test Sources Root“.
-. Right-click on the `resources`folder inside `src\main` and choose
-“Mark Directory as“ then choose “Resources Root“.
+. Right-click on the `resources` folder inside `src\main` and choose
+“Mark Directory as“, then select “Resources Root“.
