@@ -1,0 +1,41 @@
+= Using PostgreSQL
+
+== the features
+
+* Enter the `postgres` database as your user.
++
+[source,bash]
+----
+$ psql -U <username> -d postgres -h localhost
+# it will automatically ask you to enter the password 
+----
+* Create a database.
++
+[source,bash]
+----
+ $ postgres=> CREATE DATABASE <my_database>;
+----
+* Enter the database you’ve created directly.
++
+[source,bash]
+----
+$ psql -U <username> -d <my_database> -h localhost
+----
+* List all databases.
++
+[source,bash]
+----
+$ postgres=> \l
+----
+* List all tables in the current database.
++
+[source,bash]
+----
+$ postgres=> \dt
+----
+* Describe a table.
++
+[source,bash]
+----
+$ postgres=> \d <table_name>
+----
