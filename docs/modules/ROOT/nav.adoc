@@ -1,24 +1,28 @@
 // the studio
 * xref:github:github.adoc[github]
 ** xref:github:github_quick_start.adoc[quick start]
-** xref:github:github_ssh.adoc[ssh connection]
-** xref:github:repository_connection.adoc[repository connection]
-** xref:github:assignment_submission.adoc[assignment submission]
+** xref:github:github_ssh.adoc[how to set up an SSH connection]
+** xref:github:repository_connection.adoc[how to connect to repository]
+** xref:github:assignment_submission.adoc[how to submit an assignment]
 
 * xref:bash:bash.adoc[bash]
 ** xref:bash:bash_quickstart.adoc[quick start]
 ** xref:bash:bash_cheat.adoc[cheat sheet]
-** xref:bash:bash_keyboard_commands.adoc[keyboard]
+** xref:bash:bash_keyboard_commands.adoc[keyboard commands]
 
 * IntelliJ
-** xref:intellij:uml_diagrams.adoc[UML diagrams]
+** xref:intellij:uml_diagrams.adoc[how to create UML diagrams]
 
 * tomcat 
-** xref:tomcat:installing.adoc[installing and running]
-** xref:tomcat:deploying.adoc[deploying a web app]
+** xref:tomcat:installing.adoc[how to install and run]
+** xref:tomcat:deploying.adoc[how to deploy a web app]
 
 * maven
-** xref:maven:intellij-to-maven.adoc[intellij project to maven structure]
+** xref:maven:intellij-to-maven.adoc[how to change intellij project to maven structure]
 
 * java
-** xref:java:updating.adoc[updating the version]
+** xref:java:updating.adoc[how to update java version]
+
+* postgreSQL
+** xref:postgres:installing.adoc[how to install]
+** xref:postgres:using.adoc[how to use]
