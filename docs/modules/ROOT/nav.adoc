@@ -24,5 +24,5 @@
 ** xref:java:updating.adoc[how to update java version]
 
 * postgreSQL
-** xref:postgres:installing.adoc[how to install]
-** xref:postgres:using.adoc[how to use]
+** xref:postgresql:installing.adoc[how to install]
+** xref:postgresql:using.adoc[how to use]
