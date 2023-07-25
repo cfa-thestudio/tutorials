@@ -19,7 +19,7 @@ $ postgres --version
 +
 [source,bash]
 ----
-$ sudo systemctl status postgresql
+$ systemctl status postgresql
 ----
 . Switch to the `postgres` user. 
 +
@@ -43,8 +43,8 @@ $ exit
 +
 [source,bash]
 ----
-$ sudo systemctl enable postgresql.service
-$ sudo systemctl start postgresql.service
+$ systemctl enable postgresql.service
+$ systemctl start postgresql.service
 ----
 . Enter the PostgreSQL command line interface. 
 +
