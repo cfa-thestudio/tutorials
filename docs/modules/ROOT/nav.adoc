@@ -1,28 +1,36 @@
+// new
+
+* xref:os-setup:os-setup.adoc[OS Setup]
+** xref:os-setup:mac.adoc[MacOS]
+** xref:os-setup:ubuntu-debian.adoc[Ubuntu or Debian]
+** xref:os-setup:arch-manjaro.adoc[ArchLinux or Manjaro]
+** xref:os-setup:double-boot.adoc[Installing Ubuntu With Windows in Dual-Boot]
+
 // the studio
-* xref:github:github.adoc[github]
-** xref:github:github_quick_start.adoc[quick start]
-** xref:github:github_ssh.adoc[how to set up an SSH connection]
-** xref:github:repository_connection.adoc[how to connect to repository]
-** xref:github:assignment_submission.adoc[how to submit an assignment]
+// * xref:github:github.adoc[github]
+// ** xref:github:github_quick_start.adoc[quick start]
+// ** xref:github:github_ssh.adoc[how to set up an SSH connection]
+// ** xref:github:repository_connection.adoc[how to connect to repository]
+// ** xref:github:assignment_submission.adoc[how to submit an assignment]
 
-* xref:bash:bash.adoc[bash]
-** xref:bash:bash_quickstart.adoc[quick start]
-** xref:bash:bash_cheat.adoc[cheat sheet]
-** xref:bash:bash_keyboard_commands.adoc[keyboard commands]
+// * xref:bash:bash.adoc[bash]
+// ** xref:bash:bash_quickstart.adoc[quick start]
+// ** xref:bash:bash_cheat.adoc[cheat sheet]
+// ** xref:bash:bash_keyboard_commands.adoc[keyboard commands]
 
-* IntelliJ
-** xref:intellij:uml_diagrams.adoc[how to create UML diagrams]
+// * IntelliJ
+// ** xref:intellij:uml_diagrams.adoc[how to create UML diagrams]
 
-* tomcat 
-** xref:tomcat:installing.adoc[how to install and run]
-** xref:tomcat:deploying.adoc[how to deploy a web app]
+// * tomcat 
+// ** xref:tomcat:installing.adoc[how to install and run]
+// ** xref:tomcat:deploying.adoc[how to deploy a web app]
 
-* maven
-** xref:maven:intellij-to-maven.adoc[how to change intellij project to maven structure]
+// * maven
+// ** xref:maven:intellij-to-maven.adoc[how to change intellij project to maven structure]
 
-* java
-** xref:java:updating.adoc[how to update java version]
+// * java
+// ** xref:java:updating.adoc[how to update java version]
 
-* postgreSQL
-** xref:postgresql:installing.adoc[how to install]
-** xref:postgresql:using.adoc[how to use]
+// * postgreSQL
+// ** xref:postgresql:installing.adoc[how to install]
+// ** xref:postgresql:using.adoc[how to use]
