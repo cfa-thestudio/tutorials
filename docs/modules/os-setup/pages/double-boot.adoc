@@ -1,0 +1,291 @@
+= Installing Ubuntu With Windows in Dual-Boot
+:imagesdir: ../images
+:figure-caption!:
+:last-update-label!:
+
+Most users are accustomed to computers running a single operating
+system, be it Windows, macOS, or one of the Linux distributions. But you
+may have heard of computers running two or more different operating
+systems. The process of installing two or more operating systems on the
+same computer and being able to choose which one to boot is called
+dual-booting or multi-booting.
+
+This process is complex, so read this tutorial carefully first. Keep in
+mind that this tutorial addresses only the dual-booting part of this
+process.
+
+For information on installing Ubuntu, go to
+https://ubuntu.com/tutorials/install-ubuntu-desktop#5-installation-setup[https://ubuntu.com/tutorials/install-ubuntu-desktop#5-installation-setup, window=_blank];
+open these installation instructions on a separate gadget or print them
+out because you might not have access to them on the computer where
+you’ll be setting up your double-boot.
+
+== Requirements
+
+* A computer running Windows 10 or 11
+* Processor (CPU): Intel Core i5 or AMD Ryzen 5
+* Memory (RAM): 8 GB or more
+* Storage (SSD): 512 GB or more (at least 30 GB available)
+* BIOS in UEFI mode (Unified Extensible Firmware Interface)
+* External hard drive to back up your data
+* 8+ GB Flash Drive
+
+== Steps
+
+=== 1 | Check the specifications of your computer
+
+[arabic]
+. Search for the “System Information“ app and open it.
+. On the “OS Name“ line, check the operating system installed.
+. On “Processor“, check your computer’s CPU.
+. On “Installed Physical Memory (RAM)“, check your computer’s RAM.
+. On “BIOS Mode“, check if it is UEFI.
++
+.BIOS mode is UEFI
+image::check-UEFI.png[BIOS mode is UEFI, 90%]
++
+. On “Secure Boot State“, check if it is On.
+. Close this app.
+. Press the Windows key to open the “Start“ menu.
+. Open “Settings“ (⚙️ icon).
+. Go to “System“ and select “Storage“.
+. Check the drives on your computer and how much space is available and
+being used.
+
+=== 2 | Create a temporary backup
+
+The backup is optional, but doing it is a good idea as you will be
+modifying your current Windows installation and may accidentally lose
+some of your data.
+
+[arabic]
+. Press the Windows key to open the “Start“ menu.
+. Search for the “Control Panel“ app and open it.
+. Click on “System and Security“.
++
+.Windows Control Panel
+image::control-panel.png[Windows Control Panel, 90%]
++
+. Click on “Backup and Restore (Windows 7)“.
+. On the left panel, click on “Create a system image“.
++
+.Create a system image
+image::create-system-image.png[Create a system image, 90%]
++
+. Select the external hard drive where you want to save the full backup
+and click on “Next“.
++
+.Save the backup
+image::save-backup.png[Save the backup, 90%]
++
+. Confirm your backup settings. This window provides information about
+the backup location, the amount of disk space that will be used by the
+backup, and any drives that will be backed up. Click on “Start
+backup“; this may take a while.
++
+.Confirm the backup settings
+image::confirm-backup-settings.png[Confirm the backup settings, 90%]
++
+. Click on “Close“ when the backup is complete.
+
+=== 3 | Create a bootable flash drive
+
+A bootable flash drive is a disk that can be used to boot a system to
+install an operating system.
+
+[arabic]
+. Go to https://ubuntu.com/#download[https://ubuntu.com/#download, window=_blank] and download Ubuntu by clicking on
+the “Get Ubuntu Desktop“ button.
++
+.Download Ubuntu
+image::get-ubuntu-desktop.png[Download Ubuntu, 90%]
++
+We recommend the LTS version because of the longer support option.
++
+When the download is finished, go to the Downloads folder and confirm
+that you have downloaded the file `ubuntu-22.04.desktop-amd64`.
+. Go to https://etcher.balena.io/[https://etcher.balena.io/, window=_blank] and click on “Download Etcher“. You
+will use Etcher to create a bootable USB flash drive, by transferring
+the disk image containing Ubuntu to your USB flash drive.
+. Install and launch Etcher.
+. Make sure your USB drive is plugged into your computer.
+. In the Etcher app, choose “Flash from file“.
++
+.Start Etcher
+image::etcher-flash.png[Start Etcher, 90%]
+. A window will appear allowing you to select the Ubuntu ISO you have
+downloaded. Click “Open“.
++
+.Select the Ubuntu image
+image::etcher-choose-file.png[Select the Ubuntu image, 90%]
+. Back in Etcher, click on “Select target“. A window will appear and
+you should see your USB flash drive there.
++
+.Etch the image with Ubuntu
+image::select-target.png[Etch the image with Ubuntu, 90%]
+. Tick the box and click “Select“.
+. Click on “Flash“. The computer may ask if you want to allow the
+Etcher app to make changes to your device, click “Yes“. This process
+might take some time, depending on the speed of your USB flash drive.
+. After it’s done flashing it, Etcher will validate it.
+. Close Etcher.
+
+=== 4 | Create free space for Ubuntu
+
+You need to create a separate partition for a second operating system on
+your hard drive. You can also just use a second hard drive if you’ve got
+one.
+
+[arabic]
+. In the Windows search bar, type “disk partitions“, and you’ll get
+the option “Create and format disk partitions“ in the Control panel.
+Click “Open“.
+. This Disk Management window shows all the connected drives.
++
+.In this image, a drive called Disk 0 has three partitions. Your drive may have a different name.
+image::disk-management-window.png[In this image, a drive called Disk 0 has three partitions. Your drive may have a different name., 90%]
++
+In this image, a drive called Disk 0 has three partitions. Your drive
+may have a different name.
++
+Partition 0 is the EFI partition with a capacity of 260MB (these values
+may be different on your computer).
++
+Partition 4 is the recovery partition with a capacity of 1000MB.
++
+NOTE: Do NOT meddle with partitions 1 and 4, EFI and Recovery: you need to
+retain the ability to restore Windows in case something goes wrong.
+
+.Read more about these partitions.
+[%collapsible%]
+====
+The EFI (Extensible Firmware Interface) is a special partition on your
+computer’s hard disk or solid-state drive (SSD) that is used to store
+files essential to the system’s boot process. The EFI partition contains
+the bootloader files needed to initialise the computer and load the
+operating system. These files include the Windows Boot Manager or other
+boot loaders, depending on the operating systems installed on the
+computer. If you have more than one operating system installed on your
+computer (e.g. Windows and Ubuntu, as you are about to do), each
+operating system will have its own boot loader stored in the EFI
+partition.
+
+Partition 4 is the recovery partition. It contains the tools and files
+needed to troubleshoot, repair or recover the operating system in the
+event of a problem or failure. You will not touch partitions 1 and 4,
+EFI and Recovery, to remain able to restore Windows in case something
+goes wrong.
+====
+
+The Windows SDD partition, which is usually labelled `C:`, is the
+primary location for the Windows operating system, programs, data and
+other files needed for your computer to run. This is the partition we
+are going to shrink to make room for the Ubuntu installation. There are
+several steps to this process.
+
+[arabic, start=3]
+. Select the Windows partition and right-click. If you’ve got more than
+one hard drive, make sure you select the one you want to dual-boot
+Ubuntu to.
+
+. Select “Shrink Volume“ from the drop-down menu.
++
+.Shrink volume
+image::shrink-volume.png[Shrink volume, 90%]
++
+. Windows will check the available space for shrinking.
++
+.Windows queries the shrink space
+image::querying-shrink-space.png[Windows queries the shrink space, 90%]
++
+. Enter the amount of space to shrink in MB.
++
+.Specify the shrink space
+image::available-shrink-space.png[Specify the shrink space, 90%]
++
+The amount you insert here is the amount of space that will be
+subtracted from the Windows partition. You may notice that in this
+example the amount of available shrink space (37768 MB) is much smaller
+than the free space on the disk (169.18 GB). This is due to the location
+of some unmovable files. Windows has certain unmovable system files
+(such as the page file, hibernation file, and others) that are located
+at the end of the drive. These files cannot be moved, so the maximum
+amount you can shrink the partition is limited by the space needed to
+keep these files in their current locations.
++
+If you don’t have enough available shrink space, here are some steps you
+can take:
+
+* Delete all unnecessary files (remember to move them to an external
+drive first, if you want to keep them).
+
+* Uninstall unused programs.
+
+* Use Windows Disk Cleanup.
+
+** Open File Explorer.
+
+** Right-click on your C drive (or any other drive you want to clean)
+and select “Properties“.
+
+** On the General tab, click on “Disk Cleanup“.
+
+** Select the types of files you want to delete (e.g. temporary files,
+recycle bin), then click “OK“ and confirm the deletion.
+
+.We recommend at least 35-50GB so that you can safely install the programs you’ll need for this course and save your code.
+[%collapsible%]
+====
+You may have noticed that the Ubuntu website states that you need a
+laptop or PC with at least 25GB of free disk space, but we recommend
+more. Besides, you don’t want to allocate all your space to Ubuntu. The
+Windows side will still need space for updates, temporary files, general
+system maintenance and other personal files you may want or need to
+create, so consider this when entering the amount of space to shrink.
+. When you decide the amount you want to shrink, click on “Shrink“.
+This operation may take a while.
+. When the shrinking is done, you will have a new unallocated partition
+on your hard drive. You will allocate this space when you install
+Ubuntu.
+====
+
+.New unallocated disk partition
+image::unallocated.png[New unallocated disk partition, 90%]
+
+=== 5 | Dual-booting
+
+Now you need to access BIOS to change the boot priority so that the
+bootable Ubuntu USB flash drive you created earlier is the first to
+boot.
+
+Before you do this, make sure to google the correct key or combination
+of keys on your keyboard to access the BIOS. The most common keys are
+F2, F12, Esc, Del, or a combination of these, and will vary depending on
+the make and/or model of your computer.
+
+[arabic]
+. Make sure the bootable flash drive is plugged into your computer.
+. Shut down and restart your computer. While it’s starting up, press the
+key or key combination (that can be Fn + F2 if you have a Lenovo laptop)
+repeatedly. You may need to try this a few times before it works.
+. This will take you to the BIOS settings of your computer. Look for
+instructions on how to navigate the BIOS settings and perform changes on
+each screen.
+. You want to change the boot priority in the BIOS. Navigate to the Boot
+(or Boot Priority) tab. There, you will find your available devices.
+. Select your bootable USB flash drive. Make sure you select the correct
+device if you have more than one.
+. Move the selected device to the top of the list, so it will be the
+first to boot. Check on the current screen for instructions on how to
+move the selected device.
+. Save the changes and exit (check your interface on how to do this).
+You may need to wait a few minutes.
+. You are now ready to install Ubuntu. The black GNU GRUB menu will
+appear, with a few options. Note that there is an automatic timeout, so
+if you don’t select anything, it will default to the first option, which
+is “Try or Install Ubuntu“. If you have an NVidia video card, choose
+“Ubuntu (safe graphics)“.
+. After a few moments, you will see a screen with two options: “Try
+Ubuntu“ or “Install Ubuntu“. Choose “Install Ubuntu“.
+. From this point on, follow the Ubuntu tutorial:
+https://ubuntu.com/tutorials/install-ubuntu-desktop#5-installation-setup[https://ubuntu.com/tutorials/install-ubuntu-desktop#5-installation-setup, window=_blank].

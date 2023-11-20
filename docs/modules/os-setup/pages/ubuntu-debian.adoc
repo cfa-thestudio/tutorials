@@ -1,0 +1,203 @@
+= Ubuntu or Debian
+:imagesdir: ../images
+:figure-caption!:
+:last-update-label!:
+
+This tutorial will help you install all the necessary software using
+your Terminal and two package managers, APT and Snap. APT should, by
+default, be installed on your system.
+
+[arabic]
+. Check if APT is installed by verifying its version:
++
+[source,bash]
+----
+$ apt --version 
+----
++
+Where `apt` is the name of the command to be executed and `--version` is
+an argument requesting the command to print the version of the apt
+package manager.
++
+You should have the following output:
++
+[source,bash]
+----
+$ apt 2.4.10 
+----
++
+`2.4.10` is the version; yours may be different.
+. Update the list of known packages from the configured package
+repositories online. Using a `sudo` command will require you to enter a
+password.
++
+....
+$ sudo apt update
+....
+. Check if Snap is installed:
++
+[source,bash]
+----
+$ snap --version
+----
++
+If Snap is not installed (this might happen in older distributions of
+Ubuntu), install it with APT:
++
+....
+$ sudo apt install snapd
+....
+. Use `apt` to install the tools from the list below.
++
+[cols=",",options="header",]
+|===
+|software |package_name
+|git |git
+|Node.js |nodejs
+|JDK 17 |openjdk-17-jdk
+|ant |ant
+|maven |maven
+|===
++
+To install any application with APT, run:
++
+[source,bash]
+----
+$ sudo apt install <package_name>
+----
++
+Where `<package_name>` identifies the software package you want to
+install.
++
+For example, to install Git, use the following command:
++
+[source,bash]
+----
+$ sudo apt install git
+----
++
+Now go ahead and run the `sudo apt install` command with every package
+name from the table above.
+. To install VSCode, go to https://code.visualstudio.com/download[https://code.visualstudio.com/download, window=_blank] 
+and download the `.deb` package for Debian and Ubuntu.
+* Run `sudo apt install` command followed by the path to the directory
+where you downloaded the package. Make sure to to use the correct file
+name. For example:
++
+[source,bash]
+----
+$ sudo apt install ~/Downloads/code_1.84.1-1699275408_amd64.deb
+----
+* Then run the following commands:
++
+[source,bash]
+----
+$ sudo apt install apt-transport-https
+$ sudo apt update
+$ sudo apt install code
+----
+. To install Tomcat 10, go to https://tomcat.apache.org/download-10.cgi[https://tomcat.apache.org/download-10.cgi, window=_blank],
+find the “Binary Distributions“ section. Under “Core“, choose the
+`.tar.gz` link to download the package.
+* Extract the contents of the TAR archive to the current directory. Make
+sure you are using the TAR archive that you just downloaded.
++
+[source,bash]
+----
+$ tar -xvf ~/Downloads/apache-tomcat-10.1.15.tar.gz
+----
+* Run the command `ls` to see the list of all files in the directory,
+and you should have a new directory named `apache-tomcat-10.1.15`.
+* Create a soft link, so you don’t have to type the entire directory
+name every time you need to access Tomcat. In the directory where you
+installed Tomcat, run the command:
++
+[source,bash]
+----
+$ ln -s apache-tomcat-10.1.15 tomcat
+----
+. To install version 15 of PostgreSQL, you are going to use the
+PostgreSQL APT Repository.
+* To create the file repository configuration, run the command:
++
+[source,bash]
+----
+$ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+----
+* To import the repository signing key, run the command:
++
+[source,bash]
+----
+$ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+----
+* Update the package lists:
++
+[source,bash]
+----
+$ sudo apt update
+----
+* Finally, install postgresql-15:
++
+[source,bash]
+----
+$ sudo apt -y install postgresql-15
+----
+. To install Zoom, go to https://zoom.us/download?os=linux[https://zoom.us/download?os=linux, window=_blank] and select
+Ubuntu or Debian.
+* Download the `.deb` package.
+* Run `sudo apt install` command followed by the path to the directory
+where you downloaded the package. Make sure to replace `<file>` with the
+correct file name. For example:
++
+[source,bash]
+----
+$ sudo apt install ~/Downloads/zoom_amd64.deb
+----
+* Then just enter your password.
+. To install the remaining applications, use Snap package manager. To
+install an application with Snap, run:
++
+[source,bash]
+----
+$ sudo snap install <package_name> --classic
+----
++
+Run `sudo snap install` command for every package below:
++
+[cols=",",options="header",]
+|===
+|software |package name and option
+|intellIJ idea |intellij-idea-ultimate –classic
+|postman |postman –classic
+|===
+
+== Other Useful Commands
+
+[source,bash]
+----
+$ apt search <package_name>
+----
+
+Checks if a certain package is available to install via the APT package
+manager.
+
+[source,bash]
+----
+$ apt show <package_name>
+----
+
+Shows information about the given package.
+
+[source,bash]
+----
+$ dpkg -L <package_name>
+----
+
+Lists all the files installed by the given package.
+
+[source,bash]
+----
+$ dpkg -S <file_name>
+----
+
+Lists all the packages that contain the given file.

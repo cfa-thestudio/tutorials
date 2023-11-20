@@ -1,0 +1,76 @@
+= MacOS
+:imagesdir: ../images
+:figure-caption!:
+:last-update-label!:
+
+You are going to install all the necessary software using your Terminal
+and the Homebrew package manager.
+
+[arabic]
+. Check if Homebrew is installed:
+
+[source,bash]
+----
+$ brew -v
+----
+
+Where `brew` is the name of the software package manager and `-v` is the
+version.
+
+You should have the following output:
+
+[source,bash]
+----
+Homebrew 4.1.11
+----
+
+`4.1.11` is the version; yours can be different.
+
+Or install:
+
+In case you don’t have Homebrew installed, copy and paste the following
+command into your terminal:
+
+[source,bash]
+----
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+----
+
+[arabic]
+. To install any application with Homebrew, run this command:
+
+[source,bash]
+----
+$ brew install <package_name>
+----
+
+Where `<package_name>` identifies the software you want to install.
+
+You can find the relationship between the software and the correspondent
+command in the following table:
+
+[cols=",",options="header",]
+|===
+|software |command
+|Git |brew install git
+|Visual Studio Code |brew install –cask visual-studio-code
+|Node.js |brew install node
+|JDK 17 |brew install openjdk@17
+|IntellIJ Idea |brew install –cask intellij-idea
+|ANT |brew install ant
+|Maven |brew install maven
+|Postman |brew install –cask postman
+|PostgreSQL |brew install postgresql@15
+|Tomcat |brew install tomcat
+|Zoom |brew install –cask zoom
+|===
+
+NOTE: The `--cask` option is used with the `brew` command to interact with
+casks. They are part of Homebrew’s package management system and are
+specifically designed for installing GUI applications and other
+non-command-line software on Mac.
+
+Go ahead and use each command, one at a time, to install all the
+software you will need in this course.
+
+NOTE: Netcat already comes pre-installed on macOS.

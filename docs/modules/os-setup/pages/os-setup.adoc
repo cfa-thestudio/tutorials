@@ -1,0 +1,56 @@
+= OS setup
+:imagesdir: ../images
+:figure-caption!:
+:last-update-label!:
+
+This tutorial will help you prepare your system by installing the
+software you will need throughout the course.
+
+Here is the list of the tools you will need for now:
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|software |purpose |website
+|Git |version control system |https://git-scm.com/[https://git-scm.com/, window=_blank]
+
+|Code - OSS / VS Code |code editor |https://github.com/microsoft/vscode[https://github.com/microsoft/vscode, window=_blank]
+
+|Node.js |javascript runtime environment |https://nodejs.org/en[https://nodejs.org/en, window=_blank]
+
+|JDK 17 |java development kit (JDK)
+|https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html[https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html, window=_blank]
+
+|intellIJ idea ultimate |integrated development environment (IDE)
+|https://www.jetbrains.com/idea/[https://www.jetbrains.com/idea/, window=_blank]
+
+|Ant |build tool for java applications |https://ant.apache.org/[https://ant.apache.org/, window=_blank]
+
+|Maven |software management tool |https://maven.apache.org/[https://maven.apache.org/, window=_blank]
+
+|Tomcat 10 |java-based web application container
+|https://tomcat.apache.org/[https://tomcat.apache.org/, window=_blank]
+
+|Postman |API platform |https://www.postman.com/[https://www.postman.com/, window=_blank]
+
+|Netcat |computer networking utility |https://netcat.sourceforge.net/[https://netcat.sourceforge.net/, window=_blank]
+
+|PostgreSQL 15 |relational database management system
+|https://www.postgresql.org/[https://www.postgresql.org/, window=_blank]
+
+|Zoom |video conferencing application |https://zoom.us/[https://zoom.us/, window=_blank]
+|===
+
+Consult the page corresponding to your operating system for instructions
+on installing this software:
+
+* xref:mac.adoc[macOS, window=_blank]
+* xref:ubuntu-debian.adoc[Ubuntu or Debian, window=_blank]
+* xref:arch-manjaro.adoc[ArchLinux or Manjaro, window=_blank]
+
+If you’ve only got Windows, consult this page first on how to set up a
+dual-boot with Ubuntu:
+
+* xref:dual-boot.adoc[Creating a Linux Partition on Windows, window=_blank]
+
+If you have trouble installing software, ask our tech support for help
+on Discord.
