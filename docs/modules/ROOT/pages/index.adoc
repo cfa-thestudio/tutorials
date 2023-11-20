@@ -1,16 +1,13 @@
-= the tutorials
+= Tutorials
 :page-layout: component
 
-Hello, *the learner*.
+Hello, *learner*.
 
-I am excited to introduce you to a set of tutorials that will make your learning experience much easier and help you overcome any doubts you may have about the tools you’ve been using. These tutorials are designed to simplify complex concepts and guide you step by step, ensuring that you can quickly grasp the material and apply it effectively.
+Here is a set of tutorials that will make your learning experience much easier and help you overcome any doubts you may have about the tools you’ve been using. They are designed to simplify complex concepts and guide you step by step.
 
-By accessing these tutorials, you’ll find solutions to common challenges and gain a deeper understanding of the tools at your disposal. I want to ensure that you have all the resources you need to succeed and make your life as a learner more convenient and enjoyable.
+Come here if you need anything installed or configured.
 
-*IO* +
-@ *the studIO* +
-room to learn IT_
-
+*IO_*
 
 
 
