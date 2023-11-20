@@ -1,3 +1,11 @@
+// new
+
+* xref:os-setup:os-setup.adoc[OS Setup]
+** xref:os-setup:mac.adoc[MacOS]
+** xref:os-setup:ubuntu-debian.adoc[Ubuntu or Debian]
+** xref:os-setup:arch-manjaro.adoc[ArchLinux or Manjaro]
+** xref:os-setup:double-boot.adoc[Installing Ubuntu With Windows in Dual-Boot]
+
 // the studio
 // * xref:github:github.adoc[github]
 // ** xref:github:github_quick_start.adoc[quick start]
