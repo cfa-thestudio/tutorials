@@ -1,5 +1,4 @@
 // new
-
 * xref:os-setup:os-setup.adoc[OS Setup]
 ** xref:os-setup:mac.adoc[MacOS]
 ** xref:os-setup:ubuntu-debian.adoc[Ubuntu or Debian]

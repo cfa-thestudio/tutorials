@@ -1,5 +1,5 @@
 name: tutorials 
-title: the tutorials
+title: Tutorials
 version: master 
 start_page: ROOT:index.adoc
 nav: #the nav file is on the respective repository,under the module ROOT

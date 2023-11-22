@@ -78,7 +78,7 @@ $ sudo apt install git
 +
 Now go ahead and run the `sudo apt install` command with every package
 name from the table above.
-. To install VSCode, go to https://code.visualstudio.com/download[https://code.visualstudio.com/download, window=_blank] 
+. To install VS Code, go to https://code.visualstudio.com/download[https://code.visualstudio.com/download, window=_blank] 
 and download the `.deb` package for Debian and Ubuntu.
 * Run `sudo apt install` command followed by the path to the directory
 where you downloaded the package. Make sure to to use the correct file
