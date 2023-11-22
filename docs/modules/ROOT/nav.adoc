@@ -5,6 +5,8 @@
 ** xref:os-setup:arch-manjaro.adoc[ArchLinux or Manjaro]
 ** xref:os-setup:double-boot.adoc[Installing Ubuntu With Windows in Dual-Boot]
 
+* xref:glossary:index.adoc[Glossary]
+
 // the studio
 // * xref:github:github.adoc[github]
 // ** xref:github:github_quick_start.adoc[quick start]

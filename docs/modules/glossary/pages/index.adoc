@@ -1,0 +1,114 @@
+= Glossary for Tutorials
+:last-update-label!:
+
+== Advance Package Tool (APT)
+
+Debian and Ubuntu store packages in remote locations called
+_repositories_. APT is the official package manager for Debian and
+Ubuntu and handles the installation of packages stored in their official
+repositories. Packages often depend on other packages being installed;
+these are called _dependencies_. APT will install and manage the
+necessary dependencies — it will install only those that are not
+installed yet, thus preventing redundant installation of packages.
+
+`apt` is a tool in the APT package management system that provides
+commands for searching, managing and querying information about
+packages. Type `man apt` in your terminal for a list of the most used
+commands and options provided by the `apt` tool.
+
+== Arch User Repository (AUR)
+
+AUR is a community-driven repository for Arch users that contains
+additional software to the official repositories. Package descriptions
+are available for Arch users to manually build the package and install
+it with `pacman`. Alternatively, packages from AUR can be installed with
+AUR Helpers, avoiding the manual process of building. This is the
+preferred method in our tutorials.
+
+== AUR Helper
+
+AUR Helpers automate using the Arch User Repository — they help with the
+rebuild process necessary for the installation of packages. We recommend
+using Yay.
+
+== dpkg
+
+dpkg is a package manager for Debian. `dpkg` is a tool that installs,
+builds, removes, and manages Debian packages in Debian-based operating
+systems. Type `man dpkg` in your terminal for a list of actions and
+options provided by the `dpkg` tool.
+
+== install
+
+`install` is a command that prompts the installation of a specific
+package.
+
+== Homebrew
+
+Homebrew is a package manager for MacOS and Linux users.
+
+`brew` is the tool in Homebrew that provides commands to install,
+manage, and update software packages. Type `brew help` in your terminal
+for a list of the most common commands and options provided by the
+`brew` tool.
+
+== Hard Link
+
+The link between the filename and the actual data stored in the file
+system. By default, every file has a single hard link that gives the
+file its name. Hard links can only reference files (not directories) in
+the same file system (that is, in the same disk partition).
+
+== Package Manager
+
+Installing software usually involves installing thousands of files in
+specific locations on your computer. To make things easier for the user,
+these files are bundled into a single file called a _package_. A
+_package manager_ (or package management system) is a collection of
+software tools that automates the downloading, installing, and removing
+of packages.
+
+== Repository
+
+A software repository, or repo for short, is a remote storage location
+where software publishers make packages available. Package managers are
+used to automatically install and update these packages on your system.
+
+== Snap
+
+Snap is a package management system developed by Canonical that is not a
+part of the Ubuntu or Debian operating systems. Snap packages, also
+called _snaps_, can be stored in third-party repositories and installed
+across a range of Linux distributions. Snaps are self-contained, with no
+dependencies required. Using Snap may result in multiple installations
+of the same packages and inefficient use of memory space. We suggest
+using Snap only when no APT package is available.
+
+`snap` is a tool to interact with snaps. The `snap` command allows for
+the installation, configuration and removal of snaps. Type `man snap` in
+your terminal for a list of options provided by the `snap` tool.
+
+== sudo
+
+`sudo` is a command-line utility that you can use to run programs like
+Apt with superuser privileges — ones that give access to system
+administration. It requires you to enter a password. Don’t use it in
+vain!
+
+== Soft Link
+
+A special kind of file (also known as _symbolic link_ or _symlink_) 
+that contains a string that
+points to the target file or directory. Soft links were created to
+overcome hard link limitations. Namely, soft links can point both to
+files and to directories. If you write something to the soft link, the
+target file is written to. However, when you delete a soft link, only
+the link is deleted, not the file itself. If the file is deleted before
+the soft link, the link will continue to exist but will point to
+nothing. In this case, the link is said to be broken.
+
+== --version
+
+`--version` is a command-line argument that prompts the version of the
+package typed before it. In many cases, you can also use a shorter
+version of this argument, `-v`.
