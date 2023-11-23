@@ -50,7 +50,7 @@ on installing this software:
 If you’ve only got Windows, consult this page first on how to set up a
 dual-boot with Ubuntu:
 
-* xref:dual-boot.adoc[Creating a Linux Partition on Windows, window=_blank]
+* xref:double-boot.adoc[Creating a Linux Partition on Windows, window=_blank]
 
 If you have trouble installing software, ask our tech support for help
 on Discord.
