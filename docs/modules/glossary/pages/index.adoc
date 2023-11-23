@@ -112,3 +112,9 @@ nothing. In this case, the link is said to be broken.
 `--version` is a command-line argument that prompts the version of the
 package typed before it. In many cases, you can also use a shorter
 version of this argument, `-v`.
+
+== Yay
+
+Yay is an AUR Helper and a wrapper for the Pacman package manager. It's a tool built on top of the Pacman package manager that adds functionality for managing packages from the Arch User Repository.
+
+`yay` is a tool that allows you to synchronise and update all packages from official repos and from AUR. Type `man yay` in your terminal for the operations and options provided by the `yay` tool.
