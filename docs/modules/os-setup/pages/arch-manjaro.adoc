@@ -9,116 +9,103 @@ Pacman should, by default, be installed on your system.
 
 [arabic]
 . Check if Pacman is installed by verifying its version:
-
++
 [source,bash]
 ----
 $ pacman --version 
 ----
-
++
 You should have the following output:
-
++
 [source,bash]
 ----
 $ Pacman v6.0.2 - libalpm v13.0.2
 ----
-
++
 `13.0.2` is the version; yours may be different.
 
-[arabic]
 . Update the list of known packages from the configured package
 repositories online:
-
-....
++
+[source,bash]
+----
 $ sudo pacman -Syu
-....
-
-[arabic]
+----
++
 . Use Pacman to install the tools from the list below.
-
++
 [cols=",",options="header",]
 |===
 |software |package_name
-|git |git
+|Git |git
 |Visual Studio Code |code
 |Node.js |nodejs
 |JDK 17 |jdk17-openjdk
-|ant |ant
-|maven |maven
-|netcat |gnu-netcat
+|ANT |ant
+|Maven |maven
+|Netcat |gnu-netcat
 |PostgreSQL 15 |postgresql
-|tomcat |tomcat10
+|Tomcat |tomcat10
 |===
-
++
 NOTE: By default, Git comes with most Linux distributions. To confirm if
 Git is installed in your system, run the command `git --version` in your
 terminal.
-
++
 To install any application with Pacman, run:
-
++
 [source,bash]
 ----
 $ sudo pacman -S <package_name>
 ----
-
++
 Where `<package_name>` identifies the software package you want to
 install.
-
++
 For example, to install Git, use the following command:
-
++
 [source,bash]
 ----
 $ sudo pacman -S git
 ----
-
++
 Now run the `sudo pacman -S` command with every package name from the
 table above.
 
-[arabic]
-. To install Zoom, go to https://zoom.us/download?os=linux[https://zoom.us/download?os=linux, window=_blank] and select
-Arch.
-* Download the package.
-* Install the package using Pacman. Make sure to use the correct path
-and file name. For example:
-+
-[source,bash]
-----
-sudo pacman -U ~/Downloads/zoom_x86_64.pkg.tar.xz
-----
-* Then just type your password when prompted.
 . Use pacman to install `yay`:
-
++
 [source,bash]
 ----
 $ sudo pacman -S yay
 ----
-
++
 Confirm the installation:
-
++
 [source,bash]
 ----
 $ sudo yay --version
 ----
 
-[arabic]
 . Use Yay to install the tools from the list below:
-
++
 [cols=",",options="header",]
 |===
 |software |package_name
-|postman |postman-bin
-|intellij idea |intellij-idea-ultimate-edition
+|Zoom |zoom
+|Postman |postman-bin
+|IntelliJ Idea |intellij-idea-ultimate-edition
 |===
-
++
 To install any application with Yay, run:
-
++
 [source,bash]
 ----
 $ sudo yay -S <package_name>
 ----
-
++
 Where `<package_name>` identifies the software package you want to
 install.
-
++
 Run the `sudo yay -S` command with every package name from the table
 above.
 

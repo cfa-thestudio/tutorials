@@ -52,11 +52,11 @@ $ sudo apt install snapd
 [cols=",",options="header",]
 |===
 |software |package_name
-|git |git
+|Git |git
 |Node.js |nodejs
 |JDK 17 |openjdk-17-jdk
-|ant |ant
-|maven |maven
+|ANT |ant
+|Maven |maven
 |===
 +
 To install any application with APT, run:
@@ -80,6 +80,7 @@ Now go ahead and run the `sudo apt install` command with every package
 name from the table above.
 . To install VS Code, go to https://code.visualstudio.com/download[https://code.visualstudio.com/download, window=_blank] 
 and download the `.deb` package for Debian and Ubuntu.
++
 * Run `sudo apt install` command followed by the path to the directory
 where you downloaded the package. Make sure to to use the correct file
 name. For example:
@@ -99,6 +100,7 @@ $ sudo apt install code
 . To install Tomcat 10, go to https://tomcat.apache.org/download-10.cgi[https://tomcat.apache.org/download-10.cgi, window=_blank],
 find the “Binary Distributions“ section. Under “Core“, choose the
 `.tar.gz` link to download the package.
++
 * Extract the contents of the TAR archive to the current directory. Make
 sure you are using the TAR archive that you just downloaded.
 +
@@ -106,8 +108,10 @@ sure you are using the TAR archive that you just downloaded.
 ----
 $ tar -xvf ~/Downloads/apache-tomcat-10.1.15.tar.gz
 ----
++
 * Run the command `ls` to see the list of all files in the directory,
 and you should have a new directory named `apache-tomcat-10.1.15`.
++
 * Create a soft link, so you don’t have to type the entire directory
 name every time you need to access Tomcat. In the directory where you
 installed Tomcat, run the command:
@@ -136,7 +140,7 @@ $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo ap
 ----
 $ sudo apt update
 ----
-* Finally, install postgresql-15:
+* Finally, install `postgresql-15``:
 +
 [source,bash]
 ----
@@ -144,7 +148,9 @@ $ sudo apt -y install postgresql-15
 ----
 . To install Zoom, go to https://zoom.us/download?os=linux[https://zoom.us/download?os=linux, window=_blank] and select
 Ubuntu or Debian.
++
 * Download the `.deb` package.
++
 * Run `sudo apt install` command followed by the path to the directory
 where you downloaded the package. Make sure to replace `<file>` with the
 correct file name. For example:
@@ -153,7 +159,9 @@ correct file name. For example:
 ----
 $ sudo apt install ~/Downloads/zoom_amd64.deb
 ----
++
 * Then just enter your password.
+
 . To install the remaining applications, use Snap package manager. To
 install an application with Snap, run:
 +
@@ -167,8 +175,8 @@ Run `sudo snap install` command for every package below:
 [cols=",",options="header",]
 |===
 |software |package name and option
-|intellIJ idea |intellij-idea-ultimate –classic
-|postman |postman –classic
+|IntelliJ Idea |intellij-idea-ultimate –classic
+|Postman |postman –classic
 |===
 
 == Other Useful Commands
