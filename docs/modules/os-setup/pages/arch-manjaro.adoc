@@ -83,7 +83,7 @@ Confirm the installation:
 +
 [source,bash]
 ----
-$ sudo yay --version
+$ yay --version
 ----
 
 . Use Yay to install the tools from the list below:
@@ -100,13 +100,13 @@ To install any application with Yay, run:
 +
 [source,bash]
 ----
-$ sudo yay -S <package_name>
+$ yay -S <package_name>
 ----
 +
 Where `<package_name>` identifies the software package you want to
 install.
 +
-Run the `sudo yay -S` command with every package name from the table
+Run the `yay -S` command with every package name from the table
 above.
 
 == Other Useful Commands
