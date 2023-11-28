@@ -113,7 +113,7 @@ the disk image containing Ubuntu to your USB flash drive.
 +
 .Start Etcher
 image::etcher-flash.png[Start Etcher, 90%]
-. A window will appear allowing you to select the Ubuntu ISO you have
+. A window will appear, allowing you to select the Ubuntu ISO you have
 downloaded. Click “Open“.
 +
 .Select the Ubuntu image
@@ -205,7 +205,7 @@ image::available-shrink-space.png[Specify the shrink space, 90%]
 +
 The amount you insert here is the amount of space that will be
 subtracted from the Windows partition. You may notice that in this
-example the amount of available shrink space (37768 MB) is much smaller
+example, the amount of available shrink space (37768 MB) is much smaller
 than the free space on the disk (169.18 GB). This is due to the location
 of some unmovable files. Windows has certain unmovable system files
 (such as the page file, hibernation file, and others) that are located
@@ -254,9 +254,9 @@ image::unallocated.png[New unallocated disk partition, 90%]
 
 === 5 | Dual-booting
 
-Now you need to access BIOS to change the boot priority so that the
-bootable Ubuntu USB flash drive you created earlier is the first to
-boot.
+Now, you need to access the BIOS and change the boot priority so that 
+the bootable Ubuntu USB flash drive you created earlier is the first 
+device to boot.
 
 Before you do this, make sure to google the correct key or combination
 of keys on your keyboard to access the BIOS. The most common keys are
@@ -265,12 +265,11 @@ the make and/or model of your computer.
 
 [arabic]
 . Make sure the bootable flash drive is plugged into your computer.
-. Shut down and restart your computer. While it’s starting up, press the
-key or key combination (that can be Fn + F2 if you have a Lenovo laptop)
-repeatedly. You may need to try this a few times before it works.
-. This will take you to the BIOS settings of your computer. Look for
-instructions on how to navigate the BIOS settings and perform changes on
-each screen.
+. Shut down and restart your computer. While it's starting up, press 
+the key or key combination (Fn + F2 on a Lenovo laptop) repeatedly. 
+You may need to try this a few times before it works.
+. This will take you to your computer's BIOS settings. Look for instructions 
+on how to navigate the BIOS settings and make changes on each screen.
 . You want to change the boot priority in the BIOS. Navigate to the Boot
 (or Boot Priority) tab. There, you will find your available devices.
 . Select your bootable USB flash drive. Make sure you select the correct
