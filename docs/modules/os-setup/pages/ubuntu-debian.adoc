@@ -15,9 +15,7 @@ default, be installed on your system.
 $ apt --version 
 ----
 +
-Where `apt` is the name of the command to be executed and `--version` is
-an argument requesting the command to print the version of the apt
-package manager.
+Where `apt` is the command's name to be executed and `--version` is an argument requesting the command to print the version of the Apt package manager.
 +
 You should have the following output:
 +
@@ -55,7 +53,7 @@ $ sudo apt install snapd
 |Git |git
 |Node.js |nodejs
 |JDK 17 |openjdk-17-jdk
-|ANT |ant
+|Ant |ant
 |Maven |maven
 |===
 +
@@ -76,14 +74,12 @@ For example, to install Git, use the following command:
 $ sudo apt install git
 ----
 +
-Now go ahead and run the `sudo apt install` command with every package
-name from the table above.
+Now run the `sudo apt install`` command with every package name from the table above.
+
 . To install VS Code, go to https://code.visualstudio.com/download[https://code.visualstudio.com/download, window=_blank] 
 and download the `.deb` package for Debian and Ubuntu.
 +
-* Run `sudo apt install` command followed by the path to the directory
-where you downloaded the package. Make sure to to use the correct file
-name. For example:
+* Run `sudo apt install`` command followed by the path to the directory where you downloaded the package. Make sure to use the correct file name. For example:
 +
 [source,bash]
 ----
@@ -109,18 +105,18 @@ sure you are using the TAR archive that you just downloaded.
 $ tar -xvf ~/Downloads/apache-tomcat-10.1.15.tar.gz
 ----
 +
-* Run the command `ls` to see the list of all files in the directory,
-and you should have a new directory named `apache-tomcat-10.1.15`.
+* Run the command `ls` to see the list of all files in the directory.
+You should have a new directory named `apache-tomcat-10.1.15`.
 +
-* Create a soft link, so you don’t have to type the entire directory
-name every time you need to access Tomcat. In the directory where you
+* Create a soft link so you don’t have to type the entire directory
+name whenever you need to access Tomcat. In the directory where you
 installed Tomcat, run the command:
 +
 [source,bash]
 ----
 $ ln -s apache-tomcat-10.1.15 tomcat
 ----
-. To install version 15 of PostgreSQL, you are going to use the
+. To install version 15 of PostgreSQL, you will use the
 PostgreSQL APT Repository.
 * To create the file repository configuration, run the command:
 +

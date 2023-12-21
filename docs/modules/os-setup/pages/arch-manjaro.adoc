@@ -3,7 +3,7 @@
 :figure-caption!:
 :last-update-label!:
 
-You are going to install all the necessary software using your Terminal,
+You will install all the necessary software using your Terminal,
 Pacman package manager, and the AUR (Arch User Repository) Helper Yay.
 Pacman should, by default, be installed on your system.
 
@@ -41,7 +41,7 @@ $ sudo pacman -Syu
 |Visual Studio Code |code
 |Node.js |nodejs
 |JDK 17 |jdk17-openjdk
-|ANT |ant
+|Ant |ant
 |Maven |maven
 |Netcat |gnu-netcat
 |PostgreSQL 15 |postgresql

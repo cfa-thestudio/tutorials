@@ -3,8 +3,7 @@
 :figure-caption!:
 :last-update-label!:
 
-You are going to install all the necessary software using your Terminal
-and the Homebrew package manager.
+You will install all the necessary software using your Terminal and the Homebrew package manager.
 
 [arabic]
 . Check if Homebrew is installed:
@@ -56,8 +55,8 @@ command in the following table:
 |Visual Studio Code |brew install –cask visual-studio-code
 |Node.js |brew install node
 |JDK 17 |brew install openjdk@17
-|IntellIJ Idea |brew install –cask intellij-idea
-|ANT |brew install ant
+|IntelliJ Idea |brew install –cask intellij-idea
+|Ant |brew install ant
 |Maven |brew install maven
 |Postman |brew install –cask postman
 |PostgreSQL |brew install postgresql@15
@@ -70,7 +69,6 @@ casks. They are part of Homebrew’s package management system and are
 specifically designed for installing GUI applications and other
 non-command-line software on Mac.
 
-Go ahead and use each command, one at a time, to install all the
-software you will need in this course.
+Use each command, one at a time, to install all the software you will need in this course.
 
 NOTE: Netcat already comes pre-installed on macOS.
