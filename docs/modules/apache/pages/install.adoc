@@ -53,7 +53,13 @@ $ dpkg --get-selections | grep apache
 ----
 * Arch Linux or Manjaro
 +
-....
+[source,bash]
+----
 $ pacman -Qs apache
-....
-* macOS `+bash     $ httpd -v+`
+----
+* macOS
++
+[source,bash]
+----
+$ httpd -v
+----
