@@ -5,6 +5,13 @@
 ** xref:os-setup:arch-manjaro.adoc[ArchLinux or Manjaro]
 ** xref:os-setup:double-boot.adoc[Windows With Ubuntu in Dual-Boot]
 
+// Apache
+
+* xref:apache:index.adoc[Apache HTTP Server]
+** xref:apache:install.adoc[Install]
+** xref:apache:configure.adoc[Configure]
+** xref:apache:use.adoc[Use]
+
 * xref:glossary:index.adoc[Glossary]
 
 // the studio
