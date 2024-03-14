@@ -1,0 +1,65 @@
+= Configuring
+
+== Steps
+
+=== Configure Settings
+
+After installing Apache HTTP Server, you can configure certain settings.
+
+Modify various lines to customise Apache’s behaviour in the main Apache
+configuration file. Open the configuration file with Vim (or another
+text editor of your choice).
+
+* Ubuntu/Debian
++
+[source,bash]
+----
+$ sudo vim /etc/apache2/apache2.conf
+----
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+$ sudo vim /etc/httpd/conf/httpd.conf
+----
+* macOS
++
+[source,bash]
+----
+sudo vim /opt/homebrew/etc/httpd/httpd.conf
+----
+
+=== DocumentRoot
+
+The `+DocumentRoot+` directive specifies the directory where Apache
+looks for files to serve. By default, it is set to:
+
+* `+/var/www/html+` for Ubuntu and Debian.
+* `+/srv/http+` for Arch Linux.
+* `+/opt/homebrew/var/www+` for macOS.
+
+To serve static pages with Apache, you may simply copy or move your HTML
+files into this directory.
+
+If you want to change the default configuration to use another
+directory:
+
+[arabic]
+. Modify the directive to point to the desired directory. Use Vim to
+modify this file.
++
+[source,bash]
+----
+$ sudo vim sites-available/000-default.conf
+----
++
+For example:
++
+[source,bash]
+----
+DocumentRoot "/usr/local/var/www"
+----
++
+This configuration sets the document root to the directory
+`+/usr/local/var/www+` instead of `+/srv/http/+` or `+/var/www/html+`.
+. Save the changes and exit.

@@ -1,0 +1,100 @@
+= Using
+
+== Steps
+
+=== Start and Stop Apache
+
+[arabic]
+. Start Apache HTTP Server.
+* Ubuntu/Debian
++
+[source,bash]
+----
+$ sudo systemctl start apache2
+----
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+$ sudo systemctl start httpd
+----
+* macOS
++
+[source,bash]
+----
+$ brew services start httpd
+----
+. Stop Apache HTTP Server.
+* Ubuntu/Debian
++
+[source,bash]
+----
+$ sudo systemctl stop apache2
+----
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+$ sudo systemctl stop httpd
+----
+* macOS
++
+[source,bash]
+----
+$ brew services stop httpd
+----
+. Restart Apache HTTP Server.
+* Ubuntu/Debian
++
+[source,bash]
+----
+$ sudo systemctl restart apache2
+----
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+$ sudo systemctl restart httpd
+----
+* macOS
++
+[source,bash]
+----
+$ brew services restart httpd
+----
+. Check the status of Apache HTTP Server.
+* Ubuntu/Debian
++
+[source,bash]
+----
+$ sudo systemctl status apache2
+----
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+$ sudo systemctl status httpd
+----
+* macOS
++
+[source,bash]
+----
+$ brew services | grep httpd
+----
+
+=== Check if It Works
+
+To verify the successful installation and configuration of the Apache
+HTTP Server, open a web browser and enter `+localhost:80+` or
+`+127.0.0.1:80+` in the address bar.
+
+NOTE: The default port for Apache is set to 80, for HTTP.
+
+If Apache runs correctly, you should see the default Apache welcome
+page, which simply says, "`It works!`" or display an Apache2 welcome
+page.
+
+To access your HTML pages, you would construct the URL with the path to
+your HTML files within the document root. For example, if your HTML file
+is located at `+/var/www/html/profile.html+`, you can access it by
+entering `+localhost:80/profile.html+` in the browser.

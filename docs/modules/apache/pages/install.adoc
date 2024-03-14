@@ -1,0 +1,59 @@
+= Installing
+
+== Steps
+
+=== Install the Package
+
+Install the Apache HTTP Server package using the package manager of your
+OS.
+
+* Ubuntu/Debian
++
+[source,bash]
+----
+# best practice - start with updating: 
+$ sudo apt update && sudo apt upgrade
+
+# for installing:
+$ sudo apt install apache2
+
+# when asking to continue, confirm with a y
+----
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+$ sudo pacman -S apache
+----
++
+During the installation, `+pacman+` will prompt for confirmation. Press
+`+Y+` to proceed.
+* macOS
++
+[source,bash]
+----
+$ brew install httpd
+----
+
+=== Verify Installation
+
+Once the installation is complete, Apache HTTP Server will become
+available for use. You can make sure that it has been installed with the
+following commands.
+
+* Ubuntu/Debian
++
+[source,bash]
+----
+#  check the version of the Apache Server
+$ apache2 -v
+
+# list all installed packages that contain “apache” in their name
+$ dpkg --get-selections | grep apache
+----
+* Arch Linux or Manjaro
++
+....
+$ pacman -Qs apache
+....
+* macOS `+bash     $ httpd -v+`
