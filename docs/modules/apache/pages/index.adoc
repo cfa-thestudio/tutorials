@@ -8,6 +8,7 @@ Use this tutorial to:
 * xref:apache:install.adoc[Install]
 * xref:apache:configure.adoc[Configure]
 * xref:apache:use.adoc[Use]
+* xref:apache:cgi.adoc[Run CGI Programs]
 
 Refer to the https://httpd.apache.org/docs/[official Apache
 documentation, window=_blank] for more advanced configuration, troubleshooting, and
