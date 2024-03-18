@@ -1,0 +1,308 @@
+= Running CGI Programs on Apache
+:imagesdir: ../images
+:figure-caption!:
+
+To get your CGI programs to work properly, you must have Apache
+configured to permit CGI execution.
+
+== Configure Apache Server
+
+=== Steps
+
+[arabic]
+. Locate the Apache server configuration file and open it in Vim.
+
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+$ sudo vim /etc/httpd/conf/httpd.conf
+----
+* Ubuntu/Debian
++
+[source,bash]
+----
+$ sudo vim /etc/apache2/conf-available/cgi-bin.conf
+----
+* macOS
++
+[source,bash]
+----
+$ vim /opt/homebrew/etc/httpd/httpd.conf
+----
+
+[arabic, start=2]
+. Enable CGI modules in Apache.
++
+NOTE: The configuration for Ubuntu is slightly different. If you use this
+OS, skip the next 3 steps.
++
+In Apache, two modules enable the server to execute CGI:
+
+* `+mod_cgid+` is typically used when you expect to handle a large
+number of concurrent CGI requests — it uses a single process to handle
+multiple requests reducing the overhead of process creation (however, it
+is a little bit more complex to configure).
+* `+mod_cgi+` is suitable for lower loads — each invocation creates a
+new process, which can lead to higher resource usage and slower
+performance when dealing with high-traffic websites.
++
+These modules execute CGI scripts and handle communication between the
+web server and the scripts. Enabling them is essential for Apache to
+handle CGI scripts properly. Choose one depending on your website’s
+specific requirements.
++
+In the configuration file, locate the following lines:
++
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+#LoadModule cgid_module modules/mod_cgid.so
+#LoadModule cgi_module modules/mod_cgi.so
+----
++
+* macOS
++
+[source,bash]
+----
+#LoadModule cgid_module lib/httpd/modules/mod_cgid.so
+#LoadModule cgi_module lib/httpd/modules/mod_cgi.so
+----
++
+NOTE: Press `+/+` to start searching within a vim document.
++
+Depending on your website’s specific requirements, uncomment either of
+these lines by removing the `+#+` at the beginning of it. When making
+this decision, you should evaluate whether simplicity outweighs
+performance concerns in your website.
++
+In this example, uncomment `+cgid+` module.
+
+[arabic, start=3]
+. Map a URL path to the CGI scripts directory
++
+The `+ScriptAlias+` directive lets you map a URL path to a specific
+directory where CGI scripts reside. Locate the `+ScriptAlias+` section
+in the configuration file and add a line similar to the following to map
+a URL path to a directory containing CGI scripts:
+
+* Arch Linux or Manjaro
++
+....
+ScriptAlias /cgi-bin/ "/srv/http/cgi-bin/"
+....
+
+* macOS
++
+....
+ScriptAlias /cgi-bin/ "/opt/homebrew/var/www/cgi-bin/"
+....
++
+The examples above map the URL path `+/cgi-bin/+` to a physical
+directory. The Apache web server treats files inside that directory as
+CGI scripts.
++
+NOTE: When you install Apache, the `+cgi-bin+` directory’s default location
+is the path described in the `+ScriptAlias+` directive. In the example
+above, it is `+/srv/http/cgi-bin/+`. If the directory is not there, you
+can create it by navigating to `+/srv/http/+` and
+running `+sudo mkdir cgi-bin+`.
+
+[arabic, start=4]
+. Enable the execution of CGI scripts and associate `+.sh+` files as CGI
+scripts by modifying the directory configuration.
+
+* Add the `++ExecCGI+` option to allow the execution of CGI scripts.
+* Add an `+AddHandler+` directive to associate the `+.sh+` file
+extension with the CGI script handler, indicating that files with this
+extension should be treated as CGI scripts.
+* In the configuration file, find the section that starts
+with `+<Directory+`. This section defines the configuration options for
+the `+cgi-bin+` directory, which is the default location for CGI
+scripts.
+* Within the `+<Directory>+` block, locate the following lines:
++
+....
+AllowOverride None
+Options None
+Require all granted
+....
+* Modify those lines to the new configuration:
++
+....
+Options +ExecCGI
+AddHandler cgi-script .sh
+Require all granted
+....
+* Save and exit the text editor.
+
+=== Ubuntu/Debian Configuration
+
+Add the following lines to the `+cgi-bin.conf+` file to enable CGI
+modules; define a `+ScriptAlias+` to map a URL path to the CGI scripts
+directory; and add some options to enable the execution of CGI scripts
+and associate `+.sh+` files as CGI scripts in that directory.
+
+....
+<IfModule mod_alias.c>
+    <IfModule mod_cgi.c>
+        Define ENABLE_USR_LIB_CGI_BIN
+    </IfModule>
+
+    <IfModule mod_cgid.c>
+        Define ENABLE_USR_LIB_CGI_BIN
+    </IfModule>
+
+    <IfDefine ENABLE_USR_LIB_CGI_BIN>
+        ScriptAlias /cgi-bin/ /var/www/html/cgi-bin/
+        <Directory "/var/www/html/cgi-bin">
+            AllowOverride None
+            Options +ExecCGI
+            AddHandler cgi-script .sh
+            Require all granted
+        </Directory>
+    </IfDefine>
+</IfModule>
+....
+
+Save and exit the text editor.
+
+NOTE: Since you are defining a new directory to run CGI scripts from, you
+must navigate to `+/var/www/html+` and create a new directory by running
+`+sudo mkdir cgi-bin+`
+
+== Create a CGI Shell Script
+
+You can use just about any programming language to serve dynamic content
+using CGI. In this example, you will use a simple shell script to
+illustrate how CGI works. You will use CGI with a simple shell script to
+generate dynamic HTML pages on the fly. Let’s go through the steps to
+create a simple shell script:
+
+[arabic]
+. Inside the `+cgi-bin+` directory, create a file called, say,
+`+script.sh+` and open it to start writing.
+. Start the script with the shebang line `+#!/bin/sh+`. This line tells
+the operating system to execute the script using the Bourne shell
+interpreter.
+. Write the necessary commands in the script to generate the desired
+HTML content. Here’s an example shell script that sends an HTML response
+with "`Hello, world!`":
++
+[source,bash]
+----
+#!/bin/sh
+
+# set the Content-Type header
+echo "Content-Type: text/html"
+echo ""
+
+# output the HTML response
+echo "<html>"
+echo "<head>"
+echo "<title>Hello</title>"
+echo "</head>"
+echo "<body>"
+echo "<h1>Hello, world!</h1>"
+echo "</body>"
+echo "</html>"
+----
+. Save and exit the text editor.
+
+== File Permissions
+
+Remember that the server does not run as your user. When the server
+starts up, it runs with the permissions of an unprivileged user —usually
+called `+http+` or `+www+` — and so it will need extra permissions to
+execute files you own.
+
+Usually, the way to give a file sufficient permissions to be executed
+by the server is to give your user execution permission for the file:
+
+[source,bash]
+----
+$ chown www:www script.sh
+$ chmod u+x script.sh
+----
+
+`+chown+` changes the owner, and `+chmod+` changes permissions. Update
+these commands to match the user, group, and CGI script to run.
+
+You can check the user and group under which the Apache server runs:
+
+* Arch Linux or Manjaro
++
+Open `+httpd.conf+` (`+/etc/httpd/conf/httpd.conf+`) and search for
+these lines:
++
+[source,bash]
+----
+User www
+Group www
+----
+* Ubuntu/Debian
++
+Open `+envvars+` (`+/etc/apache2/envvars+`) and search for these
+variables:
++
+[source,bash]
+----
+export APACHE_RUN_USER=www-data
+export APACHE_RUN_GROUP=www-data
+----
+* macOS
++
+Open `+httpd.conf+` (`+/opt/homebrew/etc/httpd/httpd.conf+`) and search
+for these lines:
++
+[source,bash]
+----
+User _www
+Group _www
+----
+
+== Restart Apache Server
+
+[cols=".<a,.<a", frame=none, grid= none]
+|===
+| Every time you make changes, you must restart or reload the Apache
+service for the changes to take effect.
+| .Your CGI script works!
+image::cgi.png[Your CGI script works!, 90%]
+
+|===
+
+* Arch Linux or Manjaro
++
+[source,bash]
+----
+$ sudo systemctl restart httpd
+----
+
+* Ubuntu/Debian
++
+Use `+a2enconf+` Apache script to enable the new `+cgi-bin+`
+configuration before restarting:
++
+[source,bash]
+----
+$ sudo a2enconf cgi-bin
+$ systemctl restart apache2
+----
+* macOS
++
+[source,bash]
+----
+$ brew services restart httpd
+----
+
+Access your script via the browser with the appropriate URL to verify
+that it generates the expected HTML output — in this case,
+`+http://localhost/cgi-bin/script.sh+`.
+
+=== More
+
+For more info and troubleshooting, check Apache HTTP Server Project’s
+tutorial on https://httpd.apache.org/docs/2.4/howto/cgi.html[Dynamic
+Content with CGI, window=_blank].
