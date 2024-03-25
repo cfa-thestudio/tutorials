@@ -1,0 +1,12 @@
+= Tomcat
+:imagesdir: ../images
+:figure-caption!:
+
+Tomcat is an open-source web server and servlet container developed by the Apache Software Foundation. It is widely used as a tool for deploying and running Java-based web applications.
+
+As a servlet container, Tomcat provides a runtime environment for Java servlets and JavaServer Pages (JSP). It implements the Java Servlet and JavaServer Pages specifications, allowing developers to build dynamic web applications using Java.
+
+This tutorial will let you:
+
+* xref:configure.adoc[Configure and run Tomcat]
+* xref:deploy.adoc[Deploy a web app with Tomcat]
