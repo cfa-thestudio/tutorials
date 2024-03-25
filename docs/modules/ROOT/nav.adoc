@@ -13,6 +13,11 @@
 ** xref:apache:use.adoc[Use]
 ** xref:apache:cgi.adoc[Run CGI Programs]
 
+// Tomcat 
+* xref:tomcat.adoc[Tomcat]
+** xref:tomcat:configure.adoc[Configure and Run]
+** xref:tomcat:deploy.adoc[Deploy a Web App]
+
 * xref:glossary:index.adoc[Glossary]
 
 // the studio
@@ -29,10 +34,6 @@
 
 // * IntelliJ
 // ** xref:intellij:uml_diagrams.adoc[how to create UML diagrams]
-
-// * tomcat 
-// ** xref:tomcat:installing.adoc[how to install and run]
-// ** xref:tomcat:deploying.adoc[how to deploy a web app]
 
 // * maven
 // ** xref:maven:intellij-to-maven.adoc[how to change intellij project to maven structure]
