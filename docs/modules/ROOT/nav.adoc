@@ -14,7 +14,7 @@
 ** xref:apache:cgi.adoc[Run CGI Programs]
 
 // Tomcat 
-* xref:tomcat.adoc[Tomcat]
+* xref:tomcat:index.adoc[Tomcat]
 ** xref:tomcat:configure.adoc[Configure and Run]
 ** xref:tomcat:deploy.adoc[Deploy a Web App]
 

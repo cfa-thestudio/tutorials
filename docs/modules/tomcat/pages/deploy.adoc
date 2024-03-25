@@ -419,7 +419,7 @@ under the License.
 . See the app running on the browser.
 +
 .Web app running in the browser
-image::hello-servlet-app.png[Web app running in the browser]
+image::hello-servlet-app.png[Web app running in the browser, 90%]
 
-NOTE: You only need to do `+mvn deploy+` the first time, after that
-do `+mvn tomcat7:redeploy+`.
+NOTE: You only need to do `+mvn deploy+` the first time, after that
+do `+mvn tomcat7:redeploy+`.
