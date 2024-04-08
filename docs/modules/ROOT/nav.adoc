@@ -18,6 +18,11 @@
 ** xref:tomcat:configure.adoc[Configure and Run]
 ** xref:tomcat:deploy.adoc[Deploy a Web App]
 
+// PostgreSQL
+* xref:postgresql:index.adoc[PostgreSQL]
+** xref:postgresql:configuring.adoc[Configuring]
+** xref:postgresql:using.adoc[Using]
+
 * xref:glossary:index.adoc[Glossary]
 
 // the studio
@@ -40,8 +45,3 @@
 
 // * java
 // ** xref:java:updating.adoc[how to update java version]
-
-// * postgreSQL
-* xref:postgresql:index.adoc[PostgreSQL]
-** xref:postgresql:configuring.adoc[Configuring]
-** xref:postgresql:using.adoc[Using]
