@@ -1,0 +1,98 @@
+= Configuring PostgreSQL
+
+== Steps
+
+[arabic]
+. Check if you have PostgreSQL installed by confirming the output of the version.
++
+[source, bash]
+----
+# For Ubuntu/Debian based
+$ pg_config --version 
+# For Arch Linux/ Manjaro and MacOS
+$ postgres --version
+----
++
+If you haven't installed it yet:
+
+* Install the PostgreSQL package. 
++
+[source,bash]
+----
+# For Ubuntu/ Debian based
+$ sudo apt install postgresql-15
+
+# For Arch Linux / Manjaro
+$ sudo pacman -S postgresql
+
+# For MacOS
+$ brew install postgresql@15
+----
+
+. Check the status of the service to see if it is running.
++
+[source,bash]
+----
+# For Ubuntu/Debian based and Arch Linux / Manjaro
+$ systemctl status postgresql
+
+# For MacOS
+$ brew services list
+----
+
+* If it is not, enable and start the PostgreSQL service. 
++
+[source,bash]
+----
+# For Ubuntu/Debian based
+$ systemctl enable postgresql.service
+$ systemctl start postgresql.service
+
+# For MacOS
+$ brew services start postgresql@15
+----
+. Switch to the `postgres` user (only for Arch Linux and Manjaro users). 
++
+[source,bash]
+----
+$ sudo su - postgres
+----
+. Initialise the data directory (only for Arch Linux and Manjaro users)
++
+If you have Ubuntu/Debian-based OS or MacOS, skip this step. 
++
+[source,bash]
+----
+# For Arch Linux / Manjaro
+$ initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
+----
+
+. Log out of `postgres` user (only for Arch Linux and Manjaro users) 
++
+[source,bash]
+----
+$ exit
+----
+
+. Enter the PostgreSQL command line interface. 
++
+[source,bash]
+----
+#For Ubuntu/Debian based and Arch Linux / Manjaro
+$ sudo -iu postgres psql
+
+# For MacOS
+$ psql postgres
+----
+. Create a new user with a specific role attribute (create databases). 
++
+[source,bash]
+----
+$ postgres=# CREATE ROLE <username> LOGIN CREATEDB;
+----
+. Exit the `psql` command line interface. 
++
+[source,bash]
+----
+$ postgres=> \q
+----

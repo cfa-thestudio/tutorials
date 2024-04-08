@@ -1,39 +1,55 @@
 = Using PostgreSQL
 
-== the features
+== Features
 
-* Enter the `postgres` database as your user.
+Here are a few useful commands to deal specifically with PostgreSQL, which may differ from standard SQL commands.
+
+. Enter the `postgres` database as your user.
 +
 [source,bash]
 ----
+# For Ubuntu/Debian based or Arch Linux / Manjaro
 $ psql -U <username> -d postgres -h localhost
-# it will automatically ask you to enter the password 
+
+# For MacOS
+$ psql postgres -U <username>
 ----
-* Create a database.
+. Create a database.
 +
 [source,bash]
 ----
  $ postgres=> CREATE DATABASE <my_database>;
 ----
-* Enter the database you’ve created directly.
+. Exit.
++
+[source, bash]
+----
+postres => \q
+----
+
+. Enter the database you’ve created directly.
 +
 [source,bash]
 ----
+# For Ubuntu/Debian based or Arch Linux / Manjaro
 $ psql -U <username> -d <my_database> -h localhost
+
+# For MacOS
+$ psql <my_database> -U <username> 
 ----
-* List all databases.
+. List all databases.
 +
 [source,bash]
 ----
 $ postgres=> \l
 ----
-* List all tables in the current database.
+. List all tables in the current database.
 +
 [source,bash]
 ----
 $ postgres=> \dt
 ----
-* Describe a table.
+. Describe a table.
 +
 [source,bash]
 ----
