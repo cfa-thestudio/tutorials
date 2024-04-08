@@ -95,5 +95,5 @@ $ postgres=# CREATE ROLE <username> LOGIN CREATEDB;
 +
 [source,bash]
 ----
-$ postgres=# \q
+$ postgres=> \q
 ----
