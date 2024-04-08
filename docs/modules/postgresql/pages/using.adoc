@@ -20,7 +20,7 @@ $ psql postgres -U <username>
 ----
  $ postgres=> CREATE DATABASE <my_database>;
 ----
-. Exit
+. Exit.
 +
 [source, bash]
 ----
