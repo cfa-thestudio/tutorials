@@ -3,9 +3,8 @@
 == Steps
 
 [arabic]
-. Check if you have PostgreSQL installed by confirming the output of the version:
+. Check if you have PostgreSQL installed by confirming the output of the version.
 +
-
 [source, bash]
 ----
 # For Ubuntu/Debian based
@@ -13,11 +12,11 @@ $ pg_config --version
 # For Arch Linux/ Manjaro and MacOS
 $ postgres --version
 ----
++
+If you haven't installed it yet:
 
-If, you haven't installed:
-
-.. Install the PostgreSQL package. 
-
+* Install the PostgreSQL package. 
++
 [source,bash]
 ----
 # For Ubuntu/ Debian based
@@ -29,8 +28,8 @@ $ sudo pacman -S postgresql
 # For MacOS
 $ brew install postgresql@15
 ----
-[start=2]
-. Check the status of the service to see if it is running with:
+
+. Check the status of the service to see if it is running.
 +
 [source,bash]
 ----
@@ -41,7 +40,7 @@ $ systemctl status postgresql
 $ brew services list
 ----
 
-.. If it is not, enable and start the PostgreSQL service. 
+* If it is not, enable and start the PostgreSQL service. 
 +
 [source,bash]
 ----
@@ -59,15 +58,15 @@ $ brew services start postgresql@15
 $ sudo su - postgres
 ----
 . Initialise the data directory (only for Arch Linux and Manjaro users)
-
-If you have Ubuntu/Debian based OS or MacOS jump this step. 
-
++
+If you have Ubuntu/Debian-based OS or MacOS, skip this step. 
++
 [source,bash]
 ----
 # For Arch Linux / Manjaro
 $ initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
 ----
-[start=5]
+
 . Log out of `postgres` user (only for Arch Linux and Manjaro users) 
 +
 [source,bash]

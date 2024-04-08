@@ -3,6 +3,7 @@
 PostgreSQL is a powerful open-source relational database management system renowned for its extensive features and scalability.
 
 Use this tutorial to:
+
 * xref:apache:configuring.adoc[Configure]
 * xref:apache:using.adoc[Use]
 

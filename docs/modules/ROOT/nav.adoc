@@ -43,5 +43,5 @@
 
 // * postgreSQL
 * xref:postgresql:index.adoc[PostgreSQL]
-** xref:postgresql:configuring.adoc[how to install]
-** xref:postgresql:using.adoc[how to use]
+** xref:postgresql:configuring.adoc[Configuring]
+** xref:postgresql:using.adoc[Using]

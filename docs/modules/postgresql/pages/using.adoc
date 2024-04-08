@@ -2,7 +2,7 @@
 
 == Features
 
-Here are some few useful commands to deal specifically with PostgreSQL, which may differ from standard SQL.
+Here are a few useful commands to deal specifically with PostgreSQL, which may differ from standard SQL commands.
 
 . Enter the `postgres` database as your user.
 +
