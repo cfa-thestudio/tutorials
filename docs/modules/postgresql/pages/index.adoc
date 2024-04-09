@@ -4,6 +4,6 @@ PostgreSQL is a powerful open-source relational database management system renow
 
 Use this tutorial to:
 
-* xref:apache:configuring.adoc[Configure]
-* xref:apache:using.adoc[Use]
+* xref:postgresql:configuring.adoc[Configure]
+* xref:postgresql:using.adoc[Use]
 
