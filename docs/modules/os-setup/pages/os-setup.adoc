@@ -43,14 +43,14 @@ Here is the list of the tools you will need for now:
 Consult the page corresponding to your operating system for instructions
 on installing this software:
 
-* xref:mac.adoc[macOS, window=_blank]
-* xref:ubuntu-debian.adoc[Ubuntu or Debian, window=_blank]
-* xref:arch-manjaro.adoc[ArchLinux or Manjaro, window=_blank]
+* xref:mac.adoc[macOS]
+* xref:ubuntu-debian.adoc[Ubuntu or Debian]
+* xref:arch-manjaro.adoc[ArchLinux or Manjaro]
 
 If you’ve only got Windows, consult this page first on how to set up a
 dual-boot with Ubuntu:
 
-* xref:double-boot.adoc[Creating a Linux Partition on Windows, window=_blank]
+* xref:double-boot.adoc[Creating a Linux Partition on Windows]
 
 If you have trouble installing software, ask our tech support for help
 on Discord.
