@@ -3,7 +3,7 @@
 ** xref:os-setup:mac.adoc[MacOS]
 ** xref:os-setup:ubuntu-debian.adoc[Ubuntu or Debian]
 ** xref:os-setup:arch-manjaro.adoc[ArchLinux or Manjaro]
-** xref:os-setup:double-boot.adoc[Windows With Ubuntu in Dual-Boot]
+** xref:os-setup:dual-boot.adoc[Windows With Ubuntu in Dual-Boot]
 
 // Apache
 

@@ -18,7 +18,7 @@ For information on installing Ubuntu, go to
 https://ubuntu.com/tutorials/install-ubuntu-desktop#5-installation-setup[https://ubuntu.com/tutorials/install-ubuntu-desktop#5-installation-setup, window=_blank];
 open these installation instructions on a separate gadget or print them
 out because you might not have access to them on the computer where
-you’ll be setting up your double-boot.
+you’ll be setting up your dual-boot.
 
 == Requirements
 
@@ -94,8 +94,8 @@ A bootable flash drive is a disk that can be used to boot a system to
 install an operating system.
 
 [arabic]
-. Go to https://ubuntu.com/#download[https://ubuntu.com/#download, window=_blank] and download Ubuntu by clicking on
-the “Get Ubuntu Desktop“ button.
+. Go to https://ubuntu.com/download/desktop[https://ubuntu.com/download/desktop, window=_blank] and download Ubuntu by clicking on
+the “Download 24.04 LTS“ button.
 +
 .Download Ubuntu
 image::get-ubuntu-desktop.png[Download Ubuntu, 90%]
@@ -103,7 +103,7 @@ image::get-ubuntu-desktop.png[Download Ubuntu, 90%]
 We recommend the LTS version because of the longer support option.
 +
 When the download is finished, go to the Downloads folder and confirm
-that you have downloaded the file `ubuntu-22.04.desktop-amd64`.
+that you have downloaded the file `ubuntu-24.04.desktop-amd64.iso`.
 . Go to https://etcher.balena.io/[https://etcher.balena.io/, window=_blank] and click on “Download Etcher“. You
 will use Etcher to create a bootable USB flash drive, by transferring
 the disk image containing Ubuntu to your USB flash drive.
