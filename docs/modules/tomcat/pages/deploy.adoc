@@ -32,11 +32,11 @@ image::web-support.png[Check "`Web Application`" and hit "`OK`"]
 ----
 <dependencies>
     <dependency>
-            <groupId>jakarta.servlet</groupId>
+        <groupId>jakarta.servlet</groupId>
         <artifactId>jakarta.servlet-api</artifactId>
         <version>5.0.0</version>
         <scope>provided</scope>
-        </dependency>
+    </dependency>
 </dependencies>
 ----
 . Add the `+tomcat+` plugin to the Maven project.
@@ -50,12 +50,12 @@ applications to Tomcat.
 ----
 <!-- in pom.xml -->
 <build>
-        <!-- set the name of the war file -->
-        <finalName>WebHelloWorld</finalName>
+    <!-- set the name of the war file -->
+    <finalName>WebHelloWorld</finalName>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
             <artifactId>tomcat7-maven-plugin</artifactId>
             <version>2.2</version>
             <configuration>
@@ -408,7 +408,7 @@ under the License.
 [source,xml]
 ----
 <server>
-        <id>tomcat</id>
+    <id>tomcat</id>
     <username>io</username>
     <password>1234</password>
 </server>
